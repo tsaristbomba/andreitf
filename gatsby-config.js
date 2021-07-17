@@ -29,7 +29,6 @@ module.exports = {
     PARALLEL_SOURCING: true,
   },
   plugins: [
-    `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify-cms`,
