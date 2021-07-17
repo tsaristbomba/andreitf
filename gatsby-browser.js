@@ -1,5 +1,12 @@
-import "./src/styles/global.css"
-// import CMS from "netlify-cms-app"
-// import pt from "netlify-cms-locales/dist/esm/pt"
+/**
+ * Implement Gatsby's Browser APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/browser-apis/
+ */
 
-// CMS.registerLocale("pt", pt)
+// You can delete this file if you're not using it
+// require("prismjs/themes/prism-tomorrow.css")
+// require("prismjs/themes/prism-solarizedlight.css")
+// require("prismjs/themes/prism-twilight.css")
+// require("prismjs/themes/prism-okaidia.css")
+require("prismjs/themes/prism.css")
