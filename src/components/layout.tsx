@@ -10,7 +10,7 @@ import GlobalStyle from "../styles/GlobalStyles"
 
 // Types
 type LayoutTypes = {
-  home: boolean
+  home?: boolean
 }
 
 const Layout: React.FC<LayoutTypes> = ({ children, home }): JSX.Element => {
