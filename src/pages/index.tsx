@@ -7,7 +7,7 @@ import { profileObj } from "../data/profile"
 // import GlobalStyles from "../styles/GlobalStyles"
 
 const IndexPage: React.FC = () => (
-  <Layout home>
+  <Layout home={false}>
     <SEO title="Home" />
     <Hero {...profileObj} />
   </Layout>

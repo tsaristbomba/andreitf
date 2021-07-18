@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         font-family: "Inter", "Nunito", sans-serif;
         line-height: 1.7rem;
+        font-weight: 300;
     }
 
     p, button, a {
@@ -18,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
 
     a {
         color: #fff;
+        font-weight: 300;
         
         
         :hover {
@@ -49,10 +51,8 @@ const GlobalStyles = createGlobalStyle`
     content: "•";
     color: ${quaternary};
     text-shadow: ${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px;
-    font-weight: bold;
     display: inline-block;
     width: 1.5rem;
-    /* margin-left: 1rem; */
     font-size: 1.5rem;
   }
 `

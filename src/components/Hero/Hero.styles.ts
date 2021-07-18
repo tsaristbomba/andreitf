@@ -15,9 +15,13 @@ type HeroStyledTypes = {
 }
 
 export const HeroContainer = styled.div`
-  height: calc(100vh - 160px);
+  height: calc(100vh - 140px);
   background: ${primary};
   overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    height: calc(100vh - 180px);
+  }
 `
 export const HeroWrapper = styled.div`
   display: grid;
@@ -29,7 +33,6 @@ export const HeroWrapper = styled.div`
   align-items: center;
   height: 100%;
   margin-top: -80px;
-  /* max-width: 600px; */
   margin: 0 auto;
 
   @media screen and (max-width: 768px) {
@@ -46,13 +49,19 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   text-align: start;
 
   @media screen and (max-width: 480px) {
     padding: 24px;
     text-align: ${(props: HeroStyledTypes) =>
       props.start ? "start" : "center"};
+
+    ul {
+      align-self: center;
+    }
+    li {
+      display: flex;
+    }
   }
 `
 export const ImageContainer = styled.div`
@@ -70,13 +79,17 @@ export const Image = styled(GatsbyImage)`
   height: 200px;
   border-radius: 50%;
   filter: grayscale(100%);
+
+  img {
+    margin: 0 auto;
+  }
 `
-export const HeroP = styled.h2`
+export const HeroP = styled.p`
   color: ${tertiary};
   text-align: start;
   padding: 12px 1rem;
-  margin: 0.5rem 0;
-  font-size: 2rem;
+  font-size: 1rem;
+  font-weight: 300;
 
   @media screen and (max-width: 480px) {
     text-align: center;
@@ -85,20 +98,20 @@ export const HeroP = styled.h2`
 export const HeroH1 = styled.h1`
   color: ${secondary};
   text-align: center;
-  /* margin: 0.5rem auto; */
   padding: 12px 1rem;
   border-radius: 8px;
-  font-size: 4rem;
+  font-size: 3rem;
   display: flex;
-  /* align-items: center; */
   text-align: start;
   font-weight: bold;
-  line-height: 64px;
+  text-transform: uppercase;
+  line-height: 45px;
   margin-bottom: -8px;
+  font-weight: 300;
 
   @media screen and (max-width: 480px) {
-    font-size: 3rem;
-    line-height: 48px;
+    font-size: 2.8rem;
+    line-height: 40px;
     text-align: center;
   }
   @media screen and (max-width: 340px) {
@@ -108,24 +121,19 @@ export const HeroH1 = styled.h1`
 export const HeroH2 = styled.h2`
   color: ${secondary};
   text-align: center;
-  /* margin: 0.5rem auto; */
-  padding: 12px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
-  /* align-items: center; */
   text-align: start;
   font-weight: bold;
   line-height: 64px;
-  /* margin-bottom: -8px; */
+  font-weight: 300;
 
   @media screen and (max-width: 480px) {
-    /* font-size: 3rem;
-    line-height: 48px;
-    text-align: center; */
+    align-self: center;
   }
-  @media screen and (max-width: 340px) {
-    /* font-size: 1rem; */
-  }
+  /* @media screen and (max-width: 340px) {
+    text-align: center;
+  } */
 `
 export const Button = styled(Link)`
   color: ${secondary};

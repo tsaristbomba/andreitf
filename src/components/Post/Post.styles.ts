@@ -13,15 +13,23 @@ import { IoReturnUpBackSharp } from "@react-icons/all-files/io5/IoReturnUpBackSh
 
 export const PostContainer = styled.div`
   background: ${primary};
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 `
 export const PostHero = styled(Img)`
   max-height: 350px;
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
   object-fit: cover;
   opacity: 0.8;
   border-radius: 4px;
   filter: grayscale(100%);
+
+  img {
+    min-width: 100%;
+  }
 
   @media screen and (max-width: 768px) {
     height: 300px;
@@ -33,8 +41,9 @@ export const PostHero = styled(Img)`
 `
 export const PostWrapper = styled.div`
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
-  padding: 24px 24px 0 24px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
 `
@@ -185,7 +194,6 @@ export const PostBody = styled.div`
     width: 1.5rem;
     margin-left: -1rem;
     font-size: 1.5rem;
-    /* top: 0em; */
   }
 `
 export const PostRelated = styled.div`
@@ -222,7 +230,6 @@ export const PostRelated = styled.div`
     font-weight: bold;
     display: inline-block;
     width: 1.5rem;
-    /* margin-left: 1rem; */
     font-size: 1.5rem;
   }
 `

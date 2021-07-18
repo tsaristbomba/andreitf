@@ -3,10 +3,9 @@ import React from "react"
 
 // Components
 import { Dot } from "../../styles/GlobalStyles"
-// import ContactBanner from "../ContactBanner"
 import Layout from "../layout"
-import ScrollButton from "../Scroll/Scroll"
-import SEO from "../seo"
+import ScrollButton from "../ScrollButton"
+import Seo from "../seo"
 import {
   PostContainer,
   PostHero,
@@ -70,8 +69,8 @@ const Post: React.FC<BlogTemplateTypes> = ({ blog }): JSX.Element => {
 
   return (
     <Layout>
-      <SEO title={blog.title} />
-      <ScrollButton data={{ message: "To the top" }} />
+      <Seo title={blog.title} />
+      <ScrollButton />
       <PostContainer>
         <PostHero
           loading="eager"
@@ -126,7 +125,6 @@ const Post: React.FC<BlogTemplateTypes> = ({ blog }): JSX.Element => {
           ) : (
             <></>
           )}
-          {/* <ContactBanner /> */}
         </PostWrapper>
       </PostContainer>
     </Layout>

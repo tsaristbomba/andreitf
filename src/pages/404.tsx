@@ -1,20 +1,15 @@
 import React from "react"
-import { RiBugLine as ErrorIcon } from "@react-icons/all-files/ri/RiBugLine"
 
-// Components
+import Error from "../components/404"
 import Seo from "../components/seo"
-import Layout from "../components/layout"
+import GlobalStyles from "../styles/GlobalStyles"
 
-const ErrorPage: React.FC = (): JSX.Element => {
-  return (
-    <Layout>
-      <Seo title="Error" />
-      <div className="flex flex-row items-center">
-        <ErrorIcon className="mr-2 text-2xl" />
-        <span> 404 Error, Page not found.</span>
-      </div>
-    </Layout>
-  )
-}
+const NotFoundPage: React.FC = () => (
+  <>
+    <GlobalStyles />
+    <Seo title="404: Not found" />
+    <Error />
+  </>
+)
 
-export default ErrorPage
+export default NotFoundPage

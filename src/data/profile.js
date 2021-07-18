@@ -1,6 +1,7 @@
 import React from "react"
-import { MdEmail } from "react-icons/md"
-import { FaTwitter, FaGithub } from "react-icons/fa"
+import { MdEmail } from "@react-icons/all-files/md/MdEmail"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
 export const profileObj = {
   alt: "Andrei's photo",

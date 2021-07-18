@@ -14,7 +14,6 @@ import {
   PostDate,
 } from "./Archive.styles"
 import { Dot } from "../../styles/GlobalStyles"
-import ScrollButton from "../Scroll/Scroll"
 
 const BlogArchive: React.FC = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -57,7 +56,6 @@ const BlogArchive: React.FC = (): JSX.Element => {
 
   return (
     <ArchiveContainer>
-      <ScrollButton data={{ message: "To the top" }} />
       <ArchiveWrapper>
         <ArchiveTitle>
           <Dot />
@@ -66,7 +64,7 @@ const BlogArchive: React.FC = (): JSX.Element => {
         <ArchiveList>
           {data.allContentfulBlogPost.edges.map((item, key) => {
             return (
-              <PostItem key={key} data-aos="fade-up">
+              <PostItem key={key}>
                 <Column1>
                   <PostLink to={`/blog/${item.node.slug}`}>
                     <PostHero

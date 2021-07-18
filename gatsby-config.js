@@ -4,29 +4,14 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Blog Starter`,
-    seoTitle: `Blog Starter`,
+    title: `Andrei T.F`,
+    seoTitle: `Andrei T. Ferreira`,
     description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit.`,
     siteUrl: "https://sakha-blog.netlify.app/",
     author: {
       name: "Lorem Ipsum Dolor",
       picture: "author.jpg", // image name from src/images
       alt: "Author picture",
-    },
-    socials: {
-      // Social links
-      instagram: "https://www.instagram.com",
-      facebook: "https://www.facebook.com",
-      twitter: "",
-      linkedin: "",
-      twitch: "",
-      dev: "",
-    },
-    colors: {
-      primary: "#663399",
-      secondary: "#9ca3af",
-      tertiary: "#fff",
-      grayscale: false, // grayscale for all images
     },
   },
   flags: {
@@ -99,11 +84,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `SakhaBlog`,
-        short_name: `Sakha`,
+        name: `Andrei T.F`,
+        short_name: `T.F`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#663399`,
+        background_color: `#2d2d2d`,
+        theme_color: `#ff184c`,
         display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

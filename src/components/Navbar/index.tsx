@@ -22,14 +22,12 @@ type NavbarTypes = {
 
 const Navbar: React.FC<NavbarTypes> = ({ handleMenu, home }): JSX.Element => {
   return (
-    <Nav>
-      <NavbarContainer home={home}>
-        {!home && (
-          <NavLogo to="/">
-            <span>T</span>
-            <LogoSpan>F</LogoSpan>
-          </NavLogo>
-        )}
+    <Nav home={home}>
+      <NavbarContainer>
+        <NavLogo to="/">
+          <span>T</span>
+          <LogoSpan>F</LogoSpan>
+        </NavLogo>
         <MobileIcon onClick={handleMenu}>
           <FaBars />
         </MobileIcon>
@@ -54,17 +52,6 @@ const Navbar: React.FC<NavbarTypes> = ({ handleMenu, home }): JSX.Element => {
               }}
             >
               Blog
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              to="/playlists/"
-              activeStyle={{
-                color: quaternary,
-                textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
-              }}
-            >
-              Playlists
             </NavLink>
           </NavItem>
         </NavMenu>

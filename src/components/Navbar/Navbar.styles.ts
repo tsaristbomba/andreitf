@@ -10,23 +10,24 @@ type NavbarStyledTypes = {
 export const Nav = styled.nav`
   background: ${primary};
   color: ${secondary};
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   z-index: 999;
+  border-bottom: ${(props: NavbarStyledTypes) =>
+    props.home ? "none" : "1px solid rgba(167, 167, 167, 0.1)"};
 `
 export const NavbarContainer = styled.div`
   display: flex;
-  justify-content: ${(props: NavbarStyledTypes) =>
-    props.home ? "center" : "space-between"};
+  justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 60px;
   z-index: 1;
   width: 100%;
-  padding-left: ${({ home }) => (home ? "0" : "24px")};
+  padding-left: 24px;
   max-width: 1100px;
 
   @media screen and (max-width: 768px) {
@@ -44,14 +45,12 @@ export const NavLogo = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
-  font-weight: bold;
   border-bottom: none;
   color: ${quaternary};
   text-shadow: ${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px;
 `
 export const LogoSpan = styled.span`
   margin-left: -5px;
-  /* padding-bottom: 3px; */
 `
 export const MobileIcon = styled.div`
   display: none;
@@ -61,32 +60,26 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 80%);
+    transform: translate(-100%, 55%);
     font-size: 1.8rem;
     cursor: pointer;
     color: ${quaternary};
     filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.8));
   }
 `
-export const NavMenu = styled.ul`
+export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   list-style: none !important;
   text-align: center;
   padding: 0;
 
-  li::before {
-    content: "";
-    padding: 0;
-    display: flex;
-  }
-
   @media screen and (max-width: 768px) {
     display: none;
   }
 `
-export const NavItem = styled.li`
-  height: 80px;
+export const NavItem = styled.div`
+  height: 60px;
 `
 
 export const NavLink = styled(Link)`
@@ -102,10 +95,5 @@ export const NavLink = styled(Link)`
   letter-spacing: 1.1px;
   transition: 0.2s ease;
   text-shadow: none;
-  font-weight: bold;
-
-  &:hover {
-    color: ${quaternary};
-    text-shadow: ${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px;
-  }
+  font-weight: 300;
 `

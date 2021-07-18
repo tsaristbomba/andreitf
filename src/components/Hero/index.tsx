@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react"
-import AOS from "aos"
-import "aos/dist/aos.css"
+import React, { useState } from "react"
 import { FaBars } from "@react-icons/all-files/fa/FaBars"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 // tyled Components
 import {
@@ -17,7 +15,6 @@ import {
   HeroH2,
 } from "./Hero.styles"
 import Sidebar from "../Sidebar"
-import { quaternary } from "../../styles/colors"
 
 // Types
 type HeroTypes = {
@@ -29,13 +26,7 @@ type HeroTypes = {
 }
 
 const Hero: React.FC<HeroTypes> = ({ socials }): JSX.Element => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  // initiate animate on scroll
-  useEffect(() => {
-    AOS.init({ duration: 600 })
-  })
-  //
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   // open/close mobile menu
   function handleMenu() {
@@ -43,45 +34,78 @@ const Hero: React.FC<HeroTypes> = ({ socials }): JSX.Element => {
   }
   //
 
-  const data = useStaticQuery(graphql`
+  const portfolio = [
     {
-      image: allFile(
-        filter: { name: { regex: "/(home-pic)/" }, ext: { regex: "/(jpg)/" } }
-      ) {
-        edges {
-          node {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-      }
-      text: allDataJson {
-        edges {
-          node {
-            name
-            description
-          }
-        }
-      }
-      portfolio: allPortfolioJson {
-        edges {
-          node {
-            title
-            githubLink
-            stack
-            link
-            description
-            imgSrc {
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+      title: "Bitcoin Glance",
+      page: "bitcoin-glance",
+      stack: ["Webpack", "Typescript", "Binance API", "CSS"],
+      link: "https://www.bitcoinglance.cc/",
+      repo: "https://github.com/tsaristbomba/bitcoin-glance",
+      description:
+        "Bitcoin Glance calculates Bitcoin market history to get a glance at the current conditions, depending on specific time frames.",
+    },
+    {
+      title: "gatsby-plugin-beast-modal",
+      page: "beast-modal",
+      stack: [
+        "Gatsby.js",
+        "Typescript",
+        "styled-components",
+        "gatsby-plugin",
+        "GraphQL",
+      ],
+      repo: "https://github.com/tsaristbomba/beast-modal",
+      description:
+        "A Gatsby plugin for easy modal display with gatsby-plugin-image.",
+    },
+    {
+      title: "andreitf.co",
+      page: "andreitf",
+      stack: [
+        "Gatsby.js",
+        "Typescript",
+        "styled-components",
+        "GraphQL",
+        "ContentfulCMS",
+      ],
+      repo: "https://github.com/tsaristbomba/portfolio-gatsby",
+      link: "https://telfer.io",
+      description: "Portfolio and Blog for myself and by myself.",
+    },
+    {
+      title: "Untilt - Bug Tracker",
+      page: "untilt",
+      stack: [
+        "React.js",
+        "Typescript",
+        "Tailwindcss",
+        "Redux",
+        "Express",
+        "Axios",
+        "MongoDB",
+      ],
+      repo: "https://github.com/tsaristbomba/untilt",
+      link: "https://untilt-bug-tracker.netlify.app/",
+      description:
+        "Untilt is an app that let you log bugs and assign them to a registered member. Once a bug is resolved, a member can mark it as such. Every member have a section of their assigned bugs and other with all bugs as well.",
+    },
+    {
+      title: "Sakha Blog Starter",
+      page: "blog-sakha",
+      stack: ["Gatsby.js", "Tailwindcss", "styled-components", "NetlifyCMS"],
+      repo: "https://github.com/tsaristbomba/gatsby-blog-sakha",
+      link: "https://sakha-blog.netlify.app/",
+      description: "Gatsbyjs blog starter template.",
+    },
+    {
+      title: "3D Criativa",
+      page: "3d-criativa",
+      stack: ["React.js", "styled-components", "Responsive Design"],
+      repo: "https://github.com/tsaristbomba/3dcriativa-v2",
+      description:
+        "Website for 3DCriativa, a São Paulo based company. Built with React.js.",
+    },
+  ]
 
   return (
     <HeroContainer id="home">
@@ -93,10 +117,10 @@ const Hero: React.FC<HeroTypes> = ({ socials }): JSX.Element => {
       <MobileIcon onClick={handleMenu}>
         <FaBars />
       </MobileIcon>
-      <HeroWrapper data-aos="fade-up">
+      <HeroWrapper>
         <HeroContent>
-          <HeroH1>{data.text.edges[0].node.name}</HeroH1>
-          <HeroP>{data.text.edges[0].node.description}</HeroP>
+          <HeroH1>Andrei T. Ferreira</HeroH1>
+          <HeroP>Dev / Learner / JAMStack enthusiast</HeroP>
           <Socials>
             {socials.map((data, key) => {
               return (
@@ -115,11 +139,13 @@ const Hero: React.FC<HeroTypes> = ({ socials }): JSX.Element => {
         </HeroContent>
         <HeroContent start>
           <HeroH2>Selected Work</HeroH2>
-          {data.portfolio.edges.map((item, key) => {
+          {portfolio.map((item, key) => {
             return (
               <ul key={key}>
                 <li>
-                  <Link to="#">{item.node.title}</Link>
+                  <Link state={item} to={`/selected-work`}>
+                    {item.title}
+                  </Link>
                 </li>
               </ul>
             )

@@ -7,8 +7,6 @@ import {
   ProfileWrapper,
   ProfileTitle,
   Title,
-  ProfilePicture,
-  Picture,
   ProfileText,
   ProfileP,
   MarkdownText,
@@ -21,13 +19,12 @@ import {
   Socials,
   SocialIcons,
   SocialLink,
-} from "./Profile.styles"
+} from "./Work.styles"
 import { Dot } from "../../styles/GlobalStyles"
 import { getImage } from "gatsby-plugin-image"
 
 //Types
 type ProfileTypes = {
-  alt: string
   skillX: string[]
   skill: string[]
   socials: {
@@ -39,7 +36,6 @@ type ProfileTypes = {
 }
 
 const Profile: React.FC<ProfileTypes> = ({
-  alt,
   skillX,
   skill,
   socials,
@@ -73,8 +69,6 @@ const Profile: React.FC<ProfileTypes> = ({
     }
   `)
 
-  const image = getImage(data.image.edges[0].node)
-
   return (
     <ProfileContainer id="about">
       <ProfileWrapper>
@@ -85,9 +79,6 @@ const Profile: React.FC<ProfileTypes> = ({
           </Title>
         </ProfileTitle>
         <ProfileContent>
-          <ProfilePicture>
-            <Picture loading="eager" image={image} alt={alt} />
-          </ProfilePicture>
           <ProfileText>
             <MarkdownText
               dangerouslySetInnerHTML={{

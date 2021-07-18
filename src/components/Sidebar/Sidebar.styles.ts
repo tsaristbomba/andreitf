@@ -39,11 +39,11 @@ export const CloseIcon = styled(FaTimes)`
 export const SidebarMenu = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 60px);
+  grid-template-rows: repeat(2, 60px);
   text-align: center;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(4, 80px);
+    grid-template-rows: repeat(2, 80px);
   }
 `
 export const SidebarHashLink = styled(Link)`

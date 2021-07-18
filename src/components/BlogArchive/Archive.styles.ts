@@ -68,16 +68,13 @@ export const Column1 = styled.div`
 export const Column2 = styled.div`
   grid-area: col2;
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: flex-start;
 `
 export const PostLink = styled(Link)`
-  /* text-decoration: none; */
   border-bottom: none;
   transition: all 0.2s ease;
   font-size: 1.6rem;
-  font-weight: bold;
 `
 export const PostDescription = styled.div`
   margin: 1rem 0;
