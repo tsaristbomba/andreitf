@@ -53,26 +53,33 @@ export const ProfileContent = styled.div`
   }
 `
 export const ProfilePicture = styled.div`
-  width: 40%;
-  height: 100%;
+  width: 100%;
   margin: 1rem 1rem 0 0;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
 
-  @media screen and (max-width: 480px) {
-    min-height: 480px;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    padding: 0;
-    margin-top: 1rem;
+  @media screen and (min-width: 768px) {
+    width: 40%;
   }
 `
 export const Picture = styled(GatsbyImage)`
-  width: 100%;
-  border-radius: 8px;
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  margin: 0 auto;
+  border: 1px solid ${quaternary};
+  filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.6));
+
+  @media screen and (min-width: 1056px) {
+    width: 400px;
+    height: 400px;
+    border-radius: 400px;
+  }
+  @media screen and (min-width: 930px) {
+    width: 350px;
+    height: 350px;
+    border-radius: 350px;
+  }
 `
 export const ProfileText = styled.div`
   width: 60%;

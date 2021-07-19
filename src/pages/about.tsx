@@ -2,6 +2,7 @@ import React from "react"
 import { MdEmail } from "@react-icons/all-files/md/MdEmail"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
+import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
 
 // Components
 import Layout from "../components/layout"
@@ -40,15 +41,21 @@ const AboutPage: React.FC = (): JSX.Element => {
       "Gatsby.js",
       "styled-components",
       "API",
-      "CSS3",
-      "Responsive Design",
+      "CSS",
+      "Tailwind",
+      "Typescript",
     ],
-    skill: ["Node.js", "Material-UI", "Bootstrap", "GraphQL"],
+    skill: ["Node.js", "Material-UI", "GraphQL", "Webpack"],
     socials: [
       {
-        name: "Twitter",
-        icon: <FaTwitter />,
-        href: "https://twitter.com/andreitelfer",
+        name: "Github",
+        icon: <FaGithub />,
+        href: "https://github.com/tsaristbomba",
+      },
+      {
+        name: "Linkedin",
+        icon: <FaLinkedinIn />,
+        href: "#",
       },
       {
         name: "Email",
@@ -56,9 +63,9 @@ const AboutPage: React.FC = (): JSX.Element => {
         href: "mailto:andreitelfer@gmail.com",
       },
       {
-        name: "Github",
-        icon: <FaGithub />,
-        href: "https://github.com/tsaristbomba",
+        name: "Twitter",
+        icon: <FaTwitter />,
+        href: "https://twitter.com/vorsakha",
       },
     ],
   }

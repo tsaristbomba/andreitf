@@ -2,6 +2,7 @@ import React from "react"
 import { MdEmail } from "@react-icons/all-files/md/MdEmail"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
+import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
 
 import Hero from "../components/PagesComponents/Hero"
 import Layout from "../components/layout"
@@ -28,9 +29,14 @@ const IndexPage: React.FC = (): JSX.Element => {
       "I don't realy tweet but if you like, you can DM me. Or you can just email me:",
     socials: [
       {
-        name: "Twitter",
-        icon: <FaTwitter />,
-        href: "https://twitter.com/andreitelfer",
+        name: "Github",
+        icon: <FaGithub />,
+        href: "https://github.com/tsaristbomba",
+      },
+      {
+        name: "Linkedin",
+        icon: <FaLinkedinIn />,
+        href: "#",
       },
       {
         name: "Email",
@@ -38,9 +44,9 @@ const IndexPage: React.FC = (): JSX.Element => {
         href: "mailto:andreitelfer@gmail.com",
       },
       {
-        name: "Github",
-        icon: <FaGithub />,
-        href: "https://github.com/tsaristbomba",
+        name: "Twitter",
+        icon: <FaTwitter />,
+        href: "https://twitter.com/vorsakha",
       },
     ],
   }
