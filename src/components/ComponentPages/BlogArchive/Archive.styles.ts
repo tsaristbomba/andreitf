@@ -1,11 +1,11 @@
 import styled from "styled-components"
 import { GatsbyImage as Img } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import { primary, secondary, tertiary } from "../../styles/colors"
+import { primary, secondary, tertiary } from "../../../styles/colors"
 
 export const ArchiveContainer = styled.div`
   background: ${primary};
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 120px);
   color: ${secondary};
 `
 export const PostHero = styled(Img)`
@@ -37,7 +37,7 @@ export const ArchiveWrapper = styled.div`
   } */
 `
 export const ArchiveTitle = styled.h2`
-  font-size: 18px;
+  font-size: 1.4rem;
   color: ${secondary};
   display: flex;
   align-items: center;

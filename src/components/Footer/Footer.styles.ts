@@ -5,10 +5,11 @@ import { primary, secondary } from "../../styles/colors"
 export const FooterContainer = styled.div`
   background: ${primary};
   font-size: 12px;
+  border-top: 1px solid #2d2d2d;
 `
 export const FooterWrapper = styled.div`
   padding: 24px;
-  height: 80px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,11 +17,11 @@ export const FooterWrapper = styled.div`
   max-width: 1100px;
   margin: 0 auto;
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     flex-direction: column;
-    height: 120px;
+    height: 80px;
     justify-content: center;
-  }
+  } */
 `
 export const FooterRights = styled.div`
   color: ${secondary};

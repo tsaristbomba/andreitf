@@ -1,11 +1,16 @@
 import styled from "styled-components"
-import { primary, quaternary, secondary, tertiary } from "../../styles/colors"
+import {
+  primary,
+  quaternary,
+  secondary,
+  tertiary,
+} from "../../../styles/colors"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const ProfileContainer = styled.div`
   background: ${primary};
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 120px);
   display: flex;
   justify-content: center;
 
@@ -29,14 +34,15 @@ export const ProfileWrapper = styled.div`
 export const ProfileTitle = styled.div`
   width: 100%;
   color: ${secondary};
+  margin-bottom: 1rem;
 `
 export const Title = styled.h3`
-  font-size: 18px;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
 `
 export const ProfileContent = styled.div`
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -70,6 +76,7 @@ export const Picture = styled(GatsbyImage)`
 export const ProfileText = styled.div`
   width: 60%;
   margin-top: 1rem;
+  color: ${secondary};
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -133,10 +140,6 @@ export const SocialIcons = styled.div`
   display: flex;
   width: 100%;
   filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
-
-  @media screen and (max-width: 480px) {
-    justify-content: center;
-  }
 `
 export const SocialLink = styled.a`
   color: ${quaternary};

@@ -7,6 +7,8 @@ import {
   ProfileWrapper,
   ProfileTitle,
   Title,
+  ProfilePicture,
+  Picture,
   ProfileText,
   ProfileP,
   MarkdownText,
@@ -19,12 +21,13 @@ import {
   Socials,
   SocialIcons,
   SocialLink,
-} from "./Work.styles"
-import { Dot } from "../../styles/GlobalStyles"
+} from "./Profile.styles"
+import { Dot } from "../../../styles/GlobalStyles"
 import { getImage } from "gatsby-plugin-image"
 
 //Types
 type ProfileTypes = {
+  alt: string
   skillX: string[]
   skill: string[]
   socials: {
@@ -33,13 +36,16 @@ type ProfileTypes = {
     icon: JSX.Element
   }[]
   contact: string
+  text: JSX.Element
 }
 
 const Profile: React.FC<ProfileTypes> = ({
+  alt,
   skillX,
   skill,
   socials,
   contact,
+  text,
 }): JSX.Element => {
   const data = useStaticQuery(graphql`
     {
@@ -57,17 +63,10 @@ const Profile: React.FC<ProfileTypes> = ({
           }
         }
       }
-      markdown: allFile(filter: { name: { regex: "/(profile-text)/" } }) {
-        edges {
-          node {
-            childrenMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
     }
   `)
+
+  const image = getImage(data.image.edges[0].node)
 
   return (
     <ProfileContainer id="about">
@@ -79,13 +78,11 @@ const Profile: React.FC<ProfileTypes> = ({
           </Title>
         </ProfileTitle>
         <ProfileContent>
+          <ProfilePicture>
+            <Picture loading="eager" image={image} alt={alt} />
+          </ProfilePicture>
           <ProfileText>
-            <MarkdownText
-              dangerouslySetInnerHTML={{
-                __html:
-                  data.markdown.edges[0].node.childrenMarkdownRemark[0].html,
-              }}
-            />
+            {text}
             <ProfileSkills>
               <SkillsTitle>
                 <Title>My Skills:</Title>

@@ -1763,6 +1763,20 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.1.1.tgz#3348564048e7a2d7398c935d466c0414ebb6a669"
   integrity sha512-Z6DoceYb/1xSg5+e+ZlPZ9v0N16ZvZ+wYMraFue4HYrE4ttONKtsvruIRf6t9TBR0YvSOfi1hUU0fJfBLCDYow==
 
+"@tsaristbomba/gatsby-plugin-beast-modal@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@tsaristbomba/gatsby-plugin-beast-modal/-/gatsby-plugin-beast-modal-0.0.6.tgz#2bbe695dd88d670e6dbe966c2965d7789b9caf10"
+  integrity sha512-nghkzjqB6kpdGGlMm2Z1hNKA7kIHaSRdvzXujgvyNP4rlXeroSxyJOz0RchuygbOB06rCGqvSBLHVkJW+gABcQ==
+  dependencies:
+    "@react-icons/all-files" "^4.1.0"
+    "@types/styled-components" "^5.1.11"
+    babel-plugin-styled-components "^1.13.2"
+    gatsby-plugin-image "^1.9.0"
+    gatsby-plugin-sharp "^3.9.0"
+    gatsby-plugin-styled-components "^4.9.0"
+    gatsby-transformer-sharp "^3.9.0"
+    styled-components "^5.3.0"
+
 "@turist/fetch@^7.1.7":
   version "7.1.7"
   resolved "https://registry.yarnpkg.com/@turist/fetch/-/fetch-7.1.7.tgz#a2b1f7ec0265e6fe0946c51eef34bad9b9efc865"
@@ -6344,14 +6358,6 @@ gatsby-telemetry@^2.9.0:
     lodash "^4.17.21"
     node-fetch "^2.6.1"
     uuid "3.4.0"
-
-gatsby-transformer-json@^3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-3.9.0.tgz#76b65b6eeba050876cdc7933aaface164e3e224f"
-  integrity sha512-f72XN9Q35Mcol/BQwo6VmrzUQQQtlafpjWJKjH1Bw8FCP0zxXSF4cTHMs2B9zSuGmh3y8NCCMAU64RDAoTI4ZQ==
-  dependencies:
-    "@babel/runtime" "^7.14.0"
-    bluebird "^3.7.2"
 
 gatsby-transformer-remark@^4.6.0:
   version "4.6.0"

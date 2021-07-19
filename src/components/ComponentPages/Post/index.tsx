@@ -2,10 +2,10 @@ import { Link } from "gatsby"
 import React from "react"
 
 // Components
-import { Dot } from "../../styles/GlobalStyles"
-import Layout from "../layout"
-import ScrollButton from "../ScrollButton"
-import Seo from "../seo"
+import { Dot } from "../../../styles/GlobalStyles"
+import Layout from "../../layout"
+import ScrollButton from "../../ScrollButton"
+import Seo from "../../seo"
 import {
   PostContainer,
   PostHero,

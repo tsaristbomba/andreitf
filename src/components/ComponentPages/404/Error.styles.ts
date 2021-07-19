@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { primary, quaternary, secondary, quinary } from "../../styles/colors"
+import { primary, quaternary, secondary, quinary } from "../../../styles/colors"
 
 export const ErrorContainer = styled.div`
   height: 100vh;

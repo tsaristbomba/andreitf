@@ -13,7 +13,7 @@ import {
   PostDescription,
   PostDate,
 } from "./Archive.styles"
-import { Dot } from "../../styles/GlobalStyles"
+import { Dot } from "../../../styles/GlobalStyles"
 
 const BlogArchive: React.FC = (): JSX.Element => {
   const data = useStaticQuery(graphql`

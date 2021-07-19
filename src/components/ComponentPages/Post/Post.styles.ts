@@ -7,7 +7,7 @@ import {
   quinary,
   secondary,
   tertiary,
-} from "../../styles/colors"
+} from "../../../styles/colors"
 import { Link } from "gatsby"
 import { IoReturnUpBackSharp } from "@react-icons/all-files/io5/IoReturnUpBackSharp"
 
@@ -107,6 +107,10 @@ export const PostBody = styled.div`
     padding: 0.5rem 0;
   }
 
+  h1 {
+    margin-top: 1.5rem;
+  }
+
   h2 {
     padding: 0.7rem 0;
     line-height: 30px;
@@ -127,6 +131,7 @@ export const PostBody = styled.div`
     border-radius: 8px;
     margin-left: 1rem;
     margin-right: 1rem;
+    font-weight: bold;
   }
   @media screen and (max-width: 480px) {
     pre {
