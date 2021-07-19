@@ -4,6 +4,8 @@ import {
   quaternary,
   secondary,
   tertiary,
+  senary,
+  quinary,
 } from "../../../styles/colors"
 
 // Types
@@ -75,18 +77,19 @@ export const HeroP = styled.p`
   }
 `
 export const HeroH1 = styled.h1`
-  color: ${secondary};
+  color: ${quaternary};
   text-align: center;
   padding: 12px 1rem;
   border-radius: 8px;
-  font-size: 3rem;
+  font-size: 3.5rem;
   display: flex;
   text-align: start;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 45px;
+  line-height: 55px;
   margin-bottom: -8px;
   font-weight: 300;
+  text-shadow: ${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px;
 
   @media screen and (max-width: 480px) {
     font-size: 2.8rem;
@@ -117,8 +120,6 @@ export const HeroH2 = styled.h2`
 
 export const Socials = styled.div`
   display: flex;
-  /* margin: 0 auto 1rem auto; */
-  filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
   padding: 12px 1rem;
 
   @media screen and (max-width: 480px) {
@@ -126,11 +127,16 @@ export const Socials = styled.div`
   }
 `
 export const SocialLink = styled.a`
-  color: ${quaternary};
   font-size: 2rem;
   margin-right: 1rem;
   transition: all 0.2s ease;
   border-bottom: none;
+
+  filter: drop-shadow(0px 2px 6px ${senary});
+
+  :hover {
+    filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
+  }
 `
 
 export const Tech = styled.div`

@@ -3,6 +3,7 @@ import {
   primary,
   quaternary,
   secondary,
+  senary,
   tertiary,
 } from "../../../styles/colors"
 import { Link } from "gatsby"
@@ -16,6 +17,7 @@ export const WorkContainer = styled.div`
   min-height: calc(100vh - 120px);
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: 768px) {
     height: auto;
@@ -113,14 +115,17 @@ export const Socials = styled.div`
 export const SocialIcons = styled.div`
   display: flex;
   width: 100%;
-  filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
 `
 export const SocialLink = styled.a`
-  color: ${quaternary};
   font-size: 2rem;
   margin-right: 1rem;
   transition: all 0.2s ease;
   border-bottom: none;
+  filter: drop-shadow(0px 2px 6px ${senary});
+
+  :hover {
+    filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
+  }
 `
 
 export const Arrow = styled(IoReturnUpBackSharp)`

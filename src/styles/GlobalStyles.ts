@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle, keyframes } from "styled-components"
 import { ImSpinner2 } from "@react-icons/all-files/im/ImSpinner2"
-import { primary, quaternary, quinary, tertiary } from "./colors"
+import { primary, quaternary, quinary, tertiary, senary } from "./colors"
 import { GoPrimitiveDot } from "@react-icons/all-files/go/GoPrimitiveDot"
 
 const GlobalStyles = createGlobalStyle`
@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     a {
         color: #fff;
         font-weight: 300;
+        text-shadow: ${senary} 0px 4px 18px, ${senary} 0px 2px 10px;
         
         
         :hover {

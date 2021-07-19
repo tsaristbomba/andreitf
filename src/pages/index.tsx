@@ -54,7 +54,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       repo: "https://github.com/tsaristbomba/bitcoin-glance",
       description:
         "Bitcoin Glance calculates Bitcoin market history to get a glance at the current conditions, depending on specific time frames.",
-      image: "default",
+      image: "bg",
     },
     {
       title: "gatsby-plugin-beast-modal",
@@ -68,7 +68,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       ],
       repo: "https://github.com/tsaristbomba/beast-modal",
       description:
-        "A Gatsby plugin for easy modal display with gatsby-plugin-image. It is used in the image on this page.",
+        "A Gatsby plugin for easy modal display with gatsby-plugin-image. It is used in the example image on this page.",
       image: "default",
     },
     {
@@ -85,7 +85,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       repo: "https://github.com/tsaristbomba/portfolio-gatsby",
       link: "https://telfer.io",
       description: "Portfolio and Blog for myself and by myself.",
-      image: "default",
+      image: "TF",
     },
     {
       title: "Untilt - Bug Tracker",
@@ -103,7 +103,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       link: "https://untilt-bug-tracker.netlify.app/",
       description:
         "Untilt is an app that let you log bugs and assign them to a registered member. Once a bug is resolved, a member can mark it as such. Every member have a section of their assigned bugs and other with all bugs as well.",
-      image: "default",
+      image: "untilt",
     },
     {
       title: "Sakha Blog Starter",
@@ -118,7 +118,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       repo: "https://github.com/tsaristbomba/gatsby-blog-sakha",
       link: "https://sakha-blog.netlify.app/",
       description: "Gatsbyjs blog starter template.",
-      image: "default",
+      image: "sakha-blog",
     },
     {
       title: "3D Criativa",
@@ -127,7 +127,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       repo: "https://github.com/tsaristbomba/3dcriativa-v2",
       description:
         "Website for 3DCriativa, a São Paulo based company. Built with React.js.",
-      image: "default",
+      image: "3d",
     },
   ]
 

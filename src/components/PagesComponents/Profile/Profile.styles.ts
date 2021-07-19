@@ -3,6 +3,7 @@ import {
   primary,
   quaternary,
   secondary,
+  senary,
   tertiary,
 } from "../../../styles/colors"
 import { Link } from "gatsby"
@@ -82,17 +83,6 @@ export const ProfileText = styled.div`
     width: 100%;
   }
 `
-export const MarkdownText = styled.div`
-  color: ${secondary};
-
-  p {
-    margin-bottom: 1rem;
-  }
-`
-export const ProfileP = styled.p`
-  color: ${secondary};
-  margin-bottom: 1rem;
-`
 export const ProfileAnchor = styled.a`
   text-decoration: none;
   border-bottom: 2px solid ${quaternary};
@@ -139,12 +129,17 @@ export const Socials = styled.div`
 export const SocialIcons = styled.div`
   display: flex;
   width: 100%;
-  filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
+  margin: 1rem 0;
 `
 export const SocialLink = styled.a`
-  color: ${quaternary};
   font-size: 2rem;
   margin-right: 1rem;
   transition: all 0.2s ease;
   border-bottom: none;
+
+  filter: drop-shadow(0px 2px 6px ${senary});
+
+  :hover {
+    filter: drop-shadow(0px 2px 6px rgba(255, 24, 76, 0.5));
+  }
 `

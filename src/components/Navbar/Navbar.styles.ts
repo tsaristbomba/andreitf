@@ -60,7 +60,7 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 55%);
+    transform: translate(-100%, 50%);
     font-size: 1.8rem;
     cursor: pointer;
     color: ${quaternary};
@@ -94,6 +94,5 @@ export const NavLink = styled(Link)`
   border-bottom: 3px solid transparent;
   letter-spacing: 1.1px;
   transition: 0.2s ease;
-  text-shadow: none;
   font-weight: 300;
 `

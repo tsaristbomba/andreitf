@@ -10,8 +10,6 @@ import {
   ProfilePicture,
   Picture,
   ProfileText,
-  ProfileP,
-  MarkdownText,
   ProfileSkills,
   ProfileSkillX,
   ProfileSkill,
@@ -35,7 +33,6 @@ type ProfileTypes = {
     name: string
     icon: JSX.Element
   }[]
-  contact: string
   text: JSX.Element
 }
 
@@ -44,7 +41,6 @@ const Profile: React.FC<ProfileTypes> = ({
   skillX,
   skill,
   socials,
-  contact,
   text,
 }): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -99,7 +95,6 @@ const Profile: React.FC<ProfileTypes> = ({
                 <SkillsTitle>
                   <Title>Contact:</Title>
                 </SkillsTitle>
-                <ProfileP>{contact}</ProfileP>
                 <SocialIcons>
                   {socials.map((data, key) => {
                     return (

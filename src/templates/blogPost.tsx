@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Components
-import Post from "../components/ComponentPages/Post"
+import Post from "../components/PagesComponents/Post"
 
 // Types
 type BlogTemplateTypes = {
