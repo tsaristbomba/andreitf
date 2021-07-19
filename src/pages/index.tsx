@@ -31,7 +31,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       {
         name: "Github",
         icon: <FaGithub />,
-        href: "https://github.com/tsaristbomba",
+        href: "https://github.com/vorsakha",
       },
       {
         name: "Linkedin",
@@ -57,7 +57,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       page: "bitcoin-glance",
       stack: ["Webpack", "Typescript", "Binance API", "CSS", "PWA"],
       link: "https://www.bitcoinglance.cc/",
-      repo: "https://github.com/tsaristbomba/bitcoin-glance",
+      repo: "https://github.com/vorsakha/bitcoin-glance",
       description:
         "Bitcoin Glance calculates Bitcoin market history to get a glance at the current conditions, depending on specific time frames.",
       image: "bg",
@@ -72,7 +72,7 @@ const IndexPage: React.FC = (): JSX.Element => {
         "gatsby-plugin",
         "GraphQL",
       ],
-      repo: "https://github.com/tsaristbomba/beast-modal",
+      repo: "https://github.com/vorsakha/beast-modal",
       description:
         "A Gatsby plugin for easy modal display with gatsby-plugin-image. It is used in the example image on this page.",
       image: "default",
@@ -88,7 +88,7 @@ const IndexPage: React.FC = (): JSX.Element => {
         "ContentfulCMS",
         "PWA",
       ],
-      repo: "https://github.com/tsaristbomba/portfolio-gatsby",
+      repo: "https://github.com/vorsakha/portfolio-gatsby",
       link: "https://telfer.io",
       description: "Portfolio and Blog for myself and by myself.",
       image: "TF",
@@ -105,7 +105,7 @@ const IndexPage: React.FC = (): JSX.Element => {
         "Axios",
         "MongoDB",
       ],
-      repo: "https://github.com/tsaristbomba/untilt",
+      repo: "https://github.com/vorsakha/untilt",
       link: "https://untilt-bug-tracker.netlify.app/",
       description:
         "Untilt is an app that let you log bugs and assign them to a registered member. Once a bug is resolved, a member can mark it as such. Every member have a section of their assigned bugs and other with all bugs as well.",
@@ -121,7 +121,7 @@ const IndexPage: React.FC = (): JSX.Element => {
         "PWA",
         "NetlifyCMS",
       ],
-      repo: "https://github.com/tsaristbomba/gatsby-blog-sakha",
+      repo: "https://github.com/vorsakha/gatsby-blog-sakha",
       link: "https://sakha-blog.netlify.app/",
       description: "Gatsbyjs blog starter template.",
       image: "sakha-blog",
@@ -130,7 +130,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       title: "3D Criativa",
       page: "3d-criativa",
       stack: ["React.js", "styled-components", "Responsive Design"],
-      repo: "https://github.com/tsaristbomba/3dcriativa-v2",
+      repo: "https://github.com/vorsakha/3dcriativa-v2",
       description:
         "Website for 3DCriativa, a São Paulo based company. Built with React.js.",
       image: "3d",

@@ -50,7 +50,7 @@ const AboutPage: React.FC = (): JSX.Element => {
       {
         name: "Github",
         icon: <FaGithub />,
-        href: "https://github.com/tsaristbomba",
+        href: "https://github.com/vorsakha",
       },
       {
         name: "Linkedin",
