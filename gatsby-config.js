@@ -10,7 +10,7 @@ module.exports = {
     siteUrl: "https://sakha-blog.netlify.app/",
     author: {
       name: "Lorem Ipsum Dolor",
-      picture: "author.jpg", // image name from src/images
+      picture: "author.jpg", // image name from src/assets/images
       alt: "Author picture",
     },
   },
@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
