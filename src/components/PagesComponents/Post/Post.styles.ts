@@ -81,7 +81,7 @@ export const PostBack = styled(Link)`
   cursor: pointer;
   text-decoration: none;
 `
-export const PostAuthor = styled(Link)`
+export const PostAuthor = styled.a`
   font-size: 13.33px;
   cursor: pointer;
 
@@ -92,7 +92,6 @@ export const PostAuthor = styled(Link)`
 `
 export const PostDate = styled.small`
   color: ${tertiary};
-  /* text-shadow: ${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px; */
   width: 100%;
 
   span {

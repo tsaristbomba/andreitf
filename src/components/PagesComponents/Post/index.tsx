@@ -88,7 +88,7 @@ const Post: React.FC<BlogTemplateTypes> = ({ blog }): JSX.Element => {
             {blog.title}
           </PostTitle>
           <PostSub>
-            <PostAuthor to="/about">
+            <PostAuthor href="https://github.com/tsaristbomba" target="_blank">
               {blog.author}
               <div />
             </PostAuthor>

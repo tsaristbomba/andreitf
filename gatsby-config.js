@@ -6,13 +6,8 @@ module.exports = {
   siteMetadata: {
     title: `Andrei T.F`,
     seoTitle: `Andrei T. Ferreira`,
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit.`,
-    siteUrl: "https://sakha-blog.netlify.app/",
-    author: {
-      name: "Lorem Ipsum Dolor",
-      picture: "author.jpg", // image name from src/assets/images
-      alt: "Author picture",
-    },
+    description: `Dev / Learner / JAMStack enthusiast`,
+    siteUrl: "https://andreitf.co/",
   },
   flags: {
     PARALLEL_SOURCING: true,
