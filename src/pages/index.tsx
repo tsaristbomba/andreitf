@@ -3,7 +3,7 @@ import { MdEmail } from "@react-icons/all-files/md/MdEmail"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
-import Hero from "../components/ComponentPages/Hero"
+import Hero from "../components/PagesComponents/Hero"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 

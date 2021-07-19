@@ -2,7 +2,7 @@ import React from "react"
 
 // Components
 import Layout from "../components/layout"
-import SelectedWork from "../components/ComponentPages/SelectedWork"
+import SelectedWork from "../components/PagesComponents/SelectedWork"
 import Seo from "../components/seo"
 
 // Types

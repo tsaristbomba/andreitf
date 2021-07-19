@@ -1,6 +1,6 @@
 import React from "react"
 
-import Error from "../components/ComponentPages/404"
+import Error from "../components/PagesComponents/404"
 import Seo from "../components/seo"
 import GlobalStyles from "../styles/GlobalStyles"
 

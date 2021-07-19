@@ -1,5 +1,5 @@
 import React from "react"
-import BlogArchive from "../components/ComponentPages/BlogArchive"
+import BlogArchive from "../components/PagesComponents/BlogArchive"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 

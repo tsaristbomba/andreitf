@@ -5,7 +5,7 @@ import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
 // Components
 import Layout from "../components/layout"
-import Profile from "../components/ComponentPages/Profile"
+import Profile from "../components/PagesComponents/Profile"
 import Seo from "../components/seo"
 
 const AboutPage: React.FC = (): JSX.Element => {
