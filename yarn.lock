@@ -1763,10 +1763,10 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.1.1.tgz#3348564048e7a2d7398c935d466c0414ebb6a669"
   integrity sha512-Z6DoceYb/1xSg5+e+ZlPZ9v0N16ZvZ+wYMraFue4HYrE4ttONKtsvruIRf6t9TBR0YvSOfi1hUU0fJfBLCDYow==
 
-"@tsaristbomba/gatsby-plugin-beast-modal@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@tsaristbomba/gatsby-plugin-beast-modal/-/gatsby-plugin-beast-modal-0.0.7.tgz#2c178db1173fa8de34c713c57d4fe5460e6c46f0"
-  integrity sha512-/3hAkHsiWNO4b3JVvVIuGCogmcO079UTRRZrtPcBVfDqETaC14Y1HV90cycL/826JaxQ78k/xSWbsbmCCA/5Aw==
+"@tsaristbomba/gatsby-plugin-beast-modal@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@tsaristbomba/gatsby-plugin-beast-modal/-/gatsby-plugin-beast-modal-0.0.8.tgz#c03e028c6af783e1d65fcaf7390a30e0937dfbeb"
+  integrity sha512-Wfygtk8t/0FaOVW08N8im9/PeUrAb5usesxs3EgsXeewj6PNFI2x4pABQELLRYr+Jgaoaca/KyK0KkPlXJp1Ng==
   dependencies:
     "@react-icons/all-files" "^4.1.0"
     "@types/styled-components" "^5.1.11"

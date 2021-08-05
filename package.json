@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
-    "@tsaristbomba/gatsby-plugin-beast-modal": "^0.0.7",
+    "@tsaristbomba/gatsby-plugin-beast-modal": "^0.0.8",
     "babel-plugin-styled-components": "^1.13.2",
     "cross-env": "^7.0.3",
     "gatsby": "^3.9.1",
