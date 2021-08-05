@@ -15,6 +15,7 @@ type WorkPageTypes = {
       page: string
       stack: string[]
       link?: string
+      npm?: string
       repo: string
       description: string
       image: string

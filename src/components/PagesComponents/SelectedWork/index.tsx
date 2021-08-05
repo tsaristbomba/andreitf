@@ -39,7 +39,7 @@ type WorkTypes = {
   description: string
   image: string
   challenges: string[]
-  npm: string
+  npm?: string
 }
 
 const Work: React.FC<WorkTypes> = ({
