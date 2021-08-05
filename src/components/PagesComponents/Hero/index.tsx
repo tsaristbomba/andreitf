@@ -60,18 +60,18 @@ const Hero: React.FC<HeroTypes> = ({ socials, portfolio }): JSX.Element => {
         </HeroContent>
         <HeroContent start>
           <HeroH2>Selected Work</HeroH2>
-          {portfolio.map((item, key) => {
-            return (
-              <ul key={key}>
-                <li>
+          <ul>
+            {portfolio.map((item, key) => {
+              return (
+                <li key={key}>
                   <Link state={item} to={`/selected-work/${item.page}`}>
                     {item.title}
                   </Link>
                   <Tech>{item.stack[0]}</Tech>
                 </li>
-              </ul>
-            )
-          })}
+              )
+            })}
+          </ul>
         </HeroContent>
       </HeroWrapper>
     </HeroContainer>
