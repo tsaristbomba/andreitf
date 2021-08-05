@@ -73,7 +73,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       repo: "https://github.com/vorsakha/saveaclass",
       description:
         "Nextjs App that grabs COD MW(2019) match history data and allow user to save a specific match class.",
-      image: "3d",
+      image: "sac",
       challenges: [
         "NextApiRequest - I had to find out how to merge some more types to the NextApiRequest for a piece of code that required it in strict typescript.",
         "localStorage - had to write checks to localStorage availability due to server side rendering of nextjs Window, and document are not available on the server. This is why you'll run into these types of errors if you are trying to access window properties or document. In my case, I was persisting my authentication token to localStorage on the previous application. To avoid running into these undefined errors at compile and build time, you can run a simple check.",
