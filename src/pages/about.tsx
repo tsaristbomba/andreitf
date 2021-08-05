@@ -37,15 +37,15 @@ const AboutPage: React.FC = (): JSX.Element => {
       </div>
     ),
     skillX: [
+      "Javascript",
+      "Typescript",
       "React.js",
       "Gatsby.js",
       "styled-components",
-      "API",
       "CSS",
       "Tailwind",
-      "Typescript",
     ],
-    skill: ["Node.js", "Material-UI", "GraphQL", "Webpack"],
+    skill: ["Next.js", "Node.js", "GraphQL", "Webpack"],
     socials: [
       {
         name: "Github",
@@ -60,13 +60,13 @@ const AboutPage: React.FC = (): JSX.Element => {
       {
         name: "Email",
         icon: <MdEmail />,
-        href: "mailto:andreitelfer@gmail.com",
+        href: "mailto:andreitf.dev@gmail.com",
       },
-      {
-        name: "Twitter",
-        icon: <FaTwitter />,
-        href: "https://twitter.com/vorsakha",
-      },
+      // {
+      //   name: "Twitter",
+      //   icon: <FaTwitter />,
+      //   href: "https://twitter.com/vorsakha",
+      // },
     ],
   }
 

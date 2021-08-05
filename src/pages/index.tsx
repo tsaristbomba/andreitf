@@ -41,13 +41,13 @@ const IndexPage: React.FC = (): JSX.Element => {
       {
         name: "Email",
         icon: <MdEmail />,
-        href: "mailto:andreitelfer@gmail.com",
+        href: "mailto:andreitf.dev@gmail.com",
       },
-      {
-        name: "Twitter",
-        icon: <FaTwitter />,
-        href: "https://twitter.com/vorsakha",
-      },
+      // {
+      //   name: "Twitter",
+      //   icon: <FaTwitter />,
+      //   href: "https://twitter.com/vorsakha",
+      // },
     ],
   }
 
