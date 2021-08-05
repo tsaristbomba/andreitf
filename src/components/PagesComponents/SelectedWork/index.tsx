@@ -1,6 +1,7 @@
 import React from "react"
 import { FaGithub as GithubIcon } from "@react-icons/all-files/fa/FaGithub"
 import { FiLink as LinkIcon } from "@react-icons/all-files/fi/FiLink"
+import { RiNpmjsFill as NpmIcon } from "@react-icons/all-files/ri/RiNpmjsFill"
 import { primary, quaternary, secondary } from "../../../styles/colors"
 
 // Utils
@@ -38,12 +39,14 @@ type WorkTypes = {
   description: string
   image: string
   challenges: string[]
+  npm: string
 }
 
 const Work: React.FC<WorkTypes> = ({
   title,
   stack,
   link,
+  npm,
   repo,
   description,
   image,
@@ -88,6 +91,15 @@ const Work: React.FC<WorkTypes> = ({
                     rel="noopener noreferrer"
                   >
                     <LinkIcon />
+                  </SocialLink>
+                )}
+                {npm && (
+                  <SocialLink
+                    href={npm}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <NpmIcon style={{ fontSize: "2.3rem" }} />
                   </SocialLink>
                 )}
               </SocialIcons>

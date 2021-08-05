@@ -71,6 +71,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       page: "save-a-class",
       stack: ["Nextjs", "MongoDB", "Tailwindcss", "Typescript"],
       repo: "https://github.com/vorsakha/saveaclass",
+      link: "https://saveaclass.vercel.app/",
       description:
         "Nextjs App that grabs COD MW(2019) match history data and allow user to save a specific match class.",
       image: "sac",
@@ -117,6 +118,7 @@ const IndexPage: React.FC = (): JSX.Element => {
         "GraphQL",
       ],
       repo: "https://github.com/vorsakha/beast-modal",
+      npm: "https://www.npmjs.com/package/@tsaristbomba/gatsby-plugin-beast-modal",
       description:
         "A Gatsby plugin for easy modal display with gatsby-plugin-image. It is used in the example image on this page.",
       image: "default",

@@ -115,6 +115,7 @@ export const Socials = styled.div`
 `
 export const SocialIcons = styled.div`
   display: flex;
+  align-items: center;
   width: 100%;
 `
 export const SocialLink = styled.a`
