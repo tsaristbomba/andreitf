@@ -96,11 +96,11 @@ const Post: React.FC<BlogTemplateTypes> = ({ blog }): JSX.Element => {
               {formatDate(blog.createdAt) === formatDate(blog.updatedAt)
                 ? formatDate(blog.createdAt)
                 : `Updated at ${formatDate(blog.updatedAt)}`}
-              {blog.tags !== null ? (
+              {/* {blog.tags !== null ? (
                 <span>Topics: {blog.tags.join(", ")}</span>
               ) : (
                 <></>
-              )}
+              )} */}
             </PostDate>
           </PostSub>
           <PostBody
