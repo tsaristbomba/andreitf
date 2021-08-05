@@ -1,6 +1,6 @@
 import React from "react"
 import { MdEmail } from "@react-icons/all-files/md/MdEmail"
-import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
+// import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
 
@@ -61,6 +61,26 @@ const IndexPage: React.FC = (): JSX.Element => {
       description:
         "Bitcoin Glance calculates Bitcoin market history to get a glance at the current conditions, depending on specific time frames.",
       image: "bg",
+      challenges: [
+        "Translated a indicator strategy to code by calculating data coming from Binance API according to the indicator specifications.",
+        "Worked more closely with Webpack and respective config file",
+      ],
+    },
+    {
+      title: "Save a Class",
+      page: "save-a-class",
+      stack: ["Nextjs", "MongoDB", "Tailwindcss", "Typescript"],
+      repo: "https://github.com/vorsakha/saveaclass",
+      description:
+        "Nextjs App that grabs COD MW(2019) match history data and allow user to save a specific match class.",
+      image: "3d",
+      challenges: [
+        "NextApiRequest - I had to find out how to merge some more types to the NextApiRequest for a piece of code that required it in strict typescript.",
+        "localStorage - had to write checks to localStorage availability due to server side rendering of nextjs Window, and document are not available on the server. This is why you'll run into these types of errors if you are trying to access window properties or document. In my case, I was persisting my authentication token to localStorage on the previous application. To avoid running into these undefined errors at compile and build time, you can run a simple check.",
+        'Font change tailwind - The "extend" functionality allows you to add your font(s) alongside the existing font utilities. Add a theme.extend.fontFamily section to the Tailwind config',
+        'Type safety with extraReducers - Was getting an error regarding putting a promise inside a redux state. Resolved it by searching through the redux toolkit documentation and correctly making "action" type safe.',
+        "non-serializable value was detected in the state Was passing aixos whole result, that apart from data, it contains various other fields related to the request. Although i'm only saving data and not other fields, as the whole res object passes to the store it goes through a middleware called Serializability, which is included in redux-toolkit and enforces Redux recommendation to only store serializable data. Serializable means it can be written down as text and converted back to original object without losing information, which doesn't work with functions. A javascript function apart from code also have scope (memory associated to it), which cannot be represented as text. Serializability checks the whole payload (it is executed before your data reaches the store, so it doesn't know which parts will be used) and notices config. As config has methods among its members Serializability alerts you that it is not serializable. You could switch the middleware off, but it can detect genuine issues, so it's generally a better idea to just keep only relevant data in the payload.",
+      ],
     },
     {
       title: "gatsby-plugin-beast-modal",
@@ -76,6 +96,11 @@ const IndexPage: React.FC = (): JSX.Element => {
       description:
         "A Gatsby plugin for easy modal display with gatsby-plugin-image. It is used in the example image on this page.",
       image: "default",
+      challenges: [
+        "Learned how to build a Gatsby plugin",
+        "Refactored to use the new official gatsby-image-plugin",
+        "Refactored to Typescript, deepening my knowledge on the language",
+      ],
     },
     {
       title: "andreitf.co",
@@ -90,8 +115,12 @@ const IndexPage: React.FC = (): JSX.Element => {
       ],
       repo: "https://github.com/vorsakha/portfolio-gatsby",
       link: "https://telfer.io",
-      description: "Portfolio and Blog for myself and by myself.",
+      description: "Portfolio and Blog.",
       image: "TF",
+      challenges: [
+        "Got more experience working with ContentfulCMS API",
+        "Learned how to make an PWA App",
+      ],
     },
     {
       title: "Untilt - Bug Tracker",
@@ -110,6 +139,12 @@ const IndexPage: React.FC = (): JSX.Element => {
       description:
         "Untilt is an app that let you log bugs and assign them to a registered member. Once a bug is resolved, a member can mark it as such. Every member have a section of their assigned bugs and other with all bugs as well.",
       image: "untilt",
+      challenges: [
+        "Learned how to work with Redux-Toolkit",
+        "Alert system with Redux",
+        "Nodejs and Express with Typescript",
+        "Added dynamic routes for selected work",
+      ],
     },
     {
       title: "Sakha Blog Starter",
@@ -125,15 +160,10 @@ const IndexPage: React.FC = (): JSX.Element => {
       link: "https://sakha-blog.netlify.app/",
       description: "Gatsbyjs blog starter template.",
       image: "sakha-blog",
-    },
-    {
-      title: "3D Criativa",
-      page: "3d-criativa",
-      stack: ["React.js", "styled-components", "Responsive Design"],
-      repo: "https://github.com/vorsakha/3dcriativa-v2",
-      description:
-        "Website for 3DCriativa, a São Paulo based company. Built with React.js.",
-      image: "3d",
+      challenges: [
+        "Got more experience working with NetlifyCMS API",
+        "NetlifyCMS generate blog posts with markdown, a different approach from ContentfulCMS, so I had to work in a different way to generate those pages based on markdown",
+      ],
     },
   ]
 

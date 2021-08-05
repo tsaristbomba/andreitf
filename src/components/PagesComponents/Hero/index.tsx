@@ -64,7 +64,7 @@ const Hero: React.FC<HeroTypes> = ({ socials, portfolio }): JSX.Element => {
             return (
               <ul key={key}>
                 <li>
-                  <Link state={item} to={`/selected-work`}>
+                  <Link state={item} to={`/selected-work/${item.page}`}>
                     {item.title}
                   </Link>
                   <Tech>{item.stack[0]}</Tech>
