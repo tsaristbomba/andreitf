@@ -45,7 +45,13 @@ const GlobalStyles = createGlobalStyle`
 
   li {
     display: flex;
-    align-items: center;
+    margin-top: 1rem;
+  }
+  li:first-child {
+    margin-top: 0;
+  }
+  li::before {
+    padding-right: 1rem;
   }
 
   ul li::before {
@@ -53,7 +59,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${quaternary};
     text-shadow: ${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px;
     display: inline-block;
-    width: 1.5rem;
+    /* width: 1.5rem; */
     font-size: 1.5rem;
   }
 `

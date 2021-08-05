@@ -87,8 +87,9 @@ export const WorkSkills = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
 `
-export const SkillsTitle = styled.div`
+export const H2Title = styled.div`
   color: ${secondary};
+  margin: 1rem 0;
 
   h2 {
     font-size: 1.2rem;
@@ -142,4 +143,7 @@ export const WorkBack = styled(Link)`
   font-size: 13.33px;
   cursor: pointer;
   text-decoration: none;
+`
+export const Challenges = styled.div`
+  margin: 2rem 0;
 `

@@ -20,11 +20,12 @@ import {
   Arrow,
   WorkContent,
   WorkText,
-  SkillsTitle,
+  H2Title,
   Skills,
   Socials,
   SocialIcons,
   SocialLink,
+  Challenges,
 } from "./Work.styles"
 import { Dot } from "../../../styles/GlobalStyles"
 
@@ -36,6 +37,7 @@ type WorkTypes = {
   repo: string
   description: string
   image: string
+  challenges: string[]
 }
 
 const Work: React.FC<WorkTypes> = ({
@@ -45,6 +47,7 @@ const Work: React.FC<WorkTypes> = ({
   repo,
   description,
   image,
+  challenges,
 }): JSX.Element => {
   return (
     <WorkContainer id="about">
@@ -70,9 +73,9 @@ const Work: React.FC<WorkTypes> = ({
           <WorkText>
             <p>{description}</p>
             <WorkSkills>
-              <SkillsTitle>
+              <H2Title>
                 <h2>Tech Stack:</h2>
-              </SkillsTitle>
+              </H2Title>
               <Skills>
                 {stack.map((data, key) => {
                   return <WorkSkillX key={key}>{data}</WorkSkillX>
@@ -98,6 +101,17 @@ const Work: React.FC<WorkTypes> = ({
                   )}
                 </SocialIcons>
               </Socials>
+
+              <Challenges>
+                <H2Title>
+                  <h2>Challenges:</h2>
+                </H2Title>
+                <ul>
+                  {challenges.map((c, key) => (
+                    <li key={key}>{c}</li>
+                  ))}
+                </ul>
+              </Challenges>
             </WorkSkills>
             <WorkBack to="/">
               <Arrow />
