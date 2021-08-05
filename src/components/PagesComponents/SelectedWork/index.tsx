@@ -72,6 +72,26 @@ const Work: React.FC<WorkTypes> = ({
           </WorkPicture>
           <WorkText>
             <p>{description}</p>
+            <Socials>
+              <SocialIcons>
+                <SocialLink
+                  href={repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GithubIcon />
+                </SocialLink>
+                {link && (
+                  <SocialLink
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkIcon />
+                  </SocialLink>
+                )}
+              </SocialIcons>
+            </Socials>
             <WorkSkills>
               <H2Title>
                 <h2>Tech Stack:</h2>
@@ -81,26 +101,6 @@ const Work: React.FC<WorkTypes> = ({
                   return <WorkSkillX key={key}>{data}</WorkSkillX>
                 })}
               </Skills>
-              <Socials>
-                <SocialIcons>
-                  <SocialLink
-                    href={repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GithubIcon />
-                  </SocialLink>
-                  {link && (
-                    <SocialLink
-                      href={link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <LinkIcon />
-                    </SocialLink>
-                  )}
-                </SocialIcons>
-              </Socials>
 
               <Challenges>
                 <H2Title>

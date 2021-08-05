@@ -83,8 +83,32 @@ const IndexPage: React.FC = (): JSX.Element => {
       ],
     },
     {
-      title: "gatsby-plugin-beast-modal",
-      page: "beast-modal",
+      title: "Untilt - Bug Tracker",
+      page: "untilt",
+      stack: [
+        "React.js",
+        "Typescript",
+        "Tailwindcss",
+        "Redux",
+        "Express",
+        "Axios",
+        "MongoDB",
+      ],
+      repo: "https://github.com/vorsakha/untilt",
+      link: "https://untilt-bug-tracker.netlify.app/",
+      description:
+        "Untilt is an app that let you log bugs and assign them to a registered member. Once a bug is resolved, a member can mark it as such. Every member have a section of their assigned bugs and other with all bugs as well.",
+      image: "untilt",
+      challenges: [
+        "Learned how to work with Redux-Toolkit",
+        "Alert system with Redux",
+        "Nodejs and Express with Typescript",
+        "Dynamic routes with Gatsbyjs",
+      ],
+    },
+    {
+      title: "Beast Modal",
+      page: "gatsby-plugin-beast-modal",
       stack: [
         "Gatsby.js",
         "Typescript",
@@ -122,30 +146,7 @@ const IndexPage: React.FC = (): JSX.Element => {
         "Learned how to make an PWA App",
       ],
     },
-    {
-      title: "Untilt - Bug Tracker",
-      page: "untilt",
-      stack: [
-        "React.js",
-        "Typescript",
-        "Tailwindcss",
-        "Redux",
-        "Express",
-        "Axios",
-        "MongoDB",
-      ],
-      repo: "https://github.com/vorsakha/untilt",
-      link: "https://untilt-bug-tracker.netlify.app/",
-      description:
-        "Untilt is an app that let you log bugs and assign them to a registered member. Once a bug is resolved, a member can mark it as such. Every member have a section of their assigned bugs and other with all bugs as well.",
-      image: "untilt",
-      challenges: [
-        "Learned how to work with Redux-Toolkit",
-        "Alert system with Redux",
-        "Nodejs and Express with Typescript",
-        "Added dynamic routes for selected work",
-      ],
-    },
+
     {
       title: "Sakha Blog Starter",
       page: "blog-sakha",

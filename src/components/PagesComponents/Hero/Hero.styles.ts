@@ -51,7 +51,7 @@ export const HeroContent = styled.div`
     margin-bottom: 10px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     padding: 24px;
     text-align: ${(props: HeroStyledTypes) =>
       props.start ? "start" : "center"};
@@ -72,7 +72,7 @@ export const HeroP = styled.p`
   font-size: 1rem;
   font-weight: 300;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     text-align: center;
   }
 `
@@ -91,6 +91,9 @@ export const HeroH1 = styled.h1`
   font-weight: 300;
   text-shadow: ${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px;
 
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
   @media screen and (max-width: 480px) {
     font-size: 2.8rem;
     line-height: 40px;
@@ -110,7 +113,7 @@ export const HeroH2 = styled.h2`
   line-height: 64px;
   font-weight: 300;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     align-self: center;
   }
   /* @media screen and (max-width: 340px) {
@@ -122,7 +125,7 @@ export const Socials = styled.div`
   display: flex;
   padding: 12px 1rem;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     justify-content: center;
   }
 `
