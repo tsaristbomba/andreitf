@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`404 renders correctly 1`] = `
+<div
+  className="sc-bdnxRM jETLa-d"
+>
+  <div
+    className="sc-gtsrHT cLkLOX"
+  >
+    <a
+      aria-current="page"
+      className="sc-jSFjdj cJRnYe"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      style={Object {}}
+    >
+      <span>
+        T
+      </span>
+      <span
+        className="sc-gKAaRy jlEiya"
+      >
+        F
+      </span>
+    </a>
+    <h1
+      className="sc-dlnjwi dAulQx"
+    >
+      <div
+        className="Typewriter"
+        data-testid="typewriter-wrapper"
+      />
+    </h1>
+    <p
+      className="sc-hKFxyN hdsYTc"
+    >
+      The page you're trying to visit 
+      <strong>
+        does not exist
+      </strong>
+    </p>
+    <a
+      aria-current="page"
+      className="sc-eCApnc bXplAe"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      style={Object {}}
+    >
+      Get me out!
+    </a>
+  </div>
+</div>
+`;
