@@ -1,6 +1,6 @@
 import React from "react"
 import { MdEmail } from "@react-icons/all-files/md/MdEmail"
-import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
+// import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
 

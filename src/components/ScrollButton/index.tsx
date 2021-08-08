@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 
 import { Button, Arrow } from "./ScrollButton.styles"
 
-const ScrollButton: React.FC = (): JSX.Element => {
+const ScrollButton = () => {
   const [scrolled, setScrolled] = useState<boolean>(false)
 
   function scrollToTop() {
