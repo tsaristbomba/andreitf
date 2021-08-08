@@ -8,7 +8,7 @@ const handleHexToRgba = (hex: string, opacity: number) => {
     .match(/.{2}/g)
     .map(x => parseInt(x, 16))
 
-  return `rgba(${result[0]},${result[1]},${result[2]}, ${opacity} )`
+  return `rgba(${result[0]},${result[1]},${result[2]}, ${opacity})`
 }
 
 export default handleHexToRgba

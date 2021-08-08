@@ -26,7 +26,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
@@ -62,9 +62,16 @@
     "typewriter-effect": "^2.18.0"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/react-test-renderer": "^17.0.1",
     "@types/styled-components": "^5.1.11",
+    "babel-jest": "^27.0.6",
+    "babel-preset-gatsby": "^1.11.0",
     "gatsby-plugin-perf-budgets": "^0.0.18",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.24",
-    "prettier": "2.3.2"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
+    "prettier": "2.3.2",
+    "react-test-renderer": "^17.0.2"
   }
 }
