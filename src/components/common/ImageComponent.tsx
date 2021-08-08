@@ -3,7 +3,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 // Utils
-import getMetadata from "../../utils/getMetadata"
 import useFilterImage from "../../utils/useFilterImage"
 
 // Types
@@ -76,10 +75,9 @@ const Image: React.FC<ImageTypes> = ({
   alt,
   forceheight,
 }): JSX.Element => {
-  const { grayscale } = getMetadata().site.siteMetadata.colors
   return (
     <Img
-      image={useFilterImage(image, grayscale)}
+      image={useFilterImage(image)}
       alt={alt}
       rounded={rounded}
       hover={hover}
