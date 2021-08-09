@@ -21,7 +21,7 @@
   "scripts": {
     "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "restart": "gatsby clean && gatsby develop",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -62,8 +62,10 @@
     "typewriter-effect": "^2.18.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^26.0.24",
-    "@types/react-test-renderer": "^17.0.1",
     "@types/styled-components": "^5.1.11",
     "babel-jest": "^27.0.6",
     "babel-preset-gatsby": "^1.11.0",
@@ -71,7 +73,6 @@
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.24",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
-    "prettier": "2.3.2",
-    "react-test-renderer": "^17.0.2"
+    "prettier": "2.3.2"
   }
 }
