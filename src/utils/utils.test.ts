@@ -1,7 +1,7 @@
-import { useStaticQuery } from "gatsby"
+// import { useStaticQuery } from "gatsby"
+// import useFilterImage from "./useFilterImage"
 import filterImageString from "./filterImageString"
 import handleHexToRgba from "./handleHexToRgba"
-import useFilterImage from "./useFilterImage"
 
 describe("Utils", () => {
   // beforeAll(() => {
