@@ -49,8 +49,11 @@ const BlogPost: React.FC<BlogTemplateTypes> = ({ data }): JSX.Element => {
 export default BlogPost
 
 export const pageQuery = graphql`
-  query ($slug: String!) {
-    blog: contentfulBlogPost(slug: { eq: $slug }) {
+  query ($slug: String!, $node_locale: String!) {
+    blog: contentfulBlogPost(
+      slug: { eq: $slug }
+      node_locale: { eq: $node_locale }
+    ) {
       title
       slug
       author
