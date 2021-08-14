@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { GatsbyImage as Img } from "gatsby-plugin-image"
-import { Link } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 import { primary, secondary, tertiary } from "../../../styles/colors"
 
 export const ArchiveContainer = styled.div`

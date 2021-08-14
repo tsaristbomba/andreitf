@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import {
   ArchiveContainer,
@@ -14,8 +14,11 @@ import {
   PostDate,
 } from "./Archive.styles"
 import { Dot } from "../../../styles/GlobalStyles"
+import { useIntl } from "gatsby-plugin-intl"
 
 const BlogArchive: React.FC = (): JSX.Element => {
+  const [intlData, setData] = useState(null)
+
   const data = useStaticQuery(graphql`
     query {
       allContentfulBlogPost(sort: { fields: createdAt, order: DESC }) {
@@ -27,6 +30,7 @@ const BlogArchive: React.FC = (): JSX.Element => {
               }
             }
             slug
+            node_locale
             title
             createdAt
             heroImage {
@@ -37,6 +41,20 @@ const BlogArchive: React.FC = (): JSX.Element => {
       }
     }
   `)
+
+  const intl = useIntl()
+
+  useEffect(() => {
+    // Todo
+    // Filter query data by locale
+    const locale = intl.locale
+
+    const filteredData = data.allContentfulBlogPost.edges.filter(
+      item => item.node.node_locale === locale
+    )
+
+    setData(filteredData)
+  }, [])
 
   function formatDate(rawDate) {
     const dateObj = new Date(rawDate)
@@ -62,7 +80,7 @@ const BlogArchive: React.FC = (): JSX.Element => {
           Blog Archive
         </ArchiveTitle>
         <ArchiveList>
-          {data.allContentfulBlogPost.edges.map((item, key) => {
+          {intlData?.map((item, key) => {
             return (
               <PostItem key={key}>
                 <Column1>
