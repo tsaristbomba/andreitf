@@ -29,7 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
           component: slash(blogTemplate),
           context: {
             slug: post.node.slug,
-            node_locale: post.node.node_locale,
+            node_locale: `/${post.node.node_locale}/`,
           },
         })
       })

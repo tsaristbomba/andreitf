@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 import { primary, quaternary, secondary, quinary } from "../../../styles/colors"
 
 export const ErrorContainer = styled.div`

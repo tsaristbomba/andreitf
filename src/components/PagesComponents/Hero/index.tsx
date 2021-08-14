@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
+import React from "react"
+import { Link } from "gatsby-plugin-intl"
 
 // tyled Components
 import {

@@ -45,9 +45,19 @@ const BlogArchive: React.FC = (): JSX.Element => {
   const intl = useIntl()
 
   useEffect(() => {
-    // Todo
-    // Filter query data by locale
-    const locale = intl.locale
+    let locale: string
+
+    switch (intl.locale) {
+      case "en":
+        locale = "en-US"
+        break
+
+      case "pt":
+        locale = "pt-BR"
+        break
+      default:
+        break
+    }
 
     const filteredData = data.allContentfulBlogPost.edges.filter(
       item => item.node.node_locale === locale

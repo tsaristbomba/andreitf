@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 import { primary, quaternary, quinary, secondary } from "../../styles/colors"
 
 // Types
