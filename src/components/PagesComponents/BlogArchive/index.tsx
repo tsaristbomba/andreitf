@@ -15,6 +15,7 @@ import {
 } from "./Archive.styles"
 import { Dot } from "../../../styles/GlobalStyles"
 import { useIntl } from "gatsby-plugin-intl"
+import getLocale from "../../../utils/getLocale"
 
 const BlogArchive: React.FC = (): JSX.Element => {
   const [intlData, setData] = useState(null)
@@ -45,19 +46,7 @@ const BlogArchive: React.FC = (): JSX.Element => {
   const intl = useIntl()
 
   useEffect(() => {
-    let locale: string
-
-    switch (intl.locale) {
-      case "en":
-        locale = "en-US"
-        break
-
-      case "pt":
-        locale = "pt-BR"
-        break
-      default:
-        break
-    }
+    const locale = getLocale(intl.locale)
 
     const filteredData = data.allContentfulBlogPost.edges.filter(
       item => item.node.node_locale === locale

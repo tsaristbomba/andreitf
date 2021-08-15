@@ -6,8 +6,7 @@ import {
   senary,
   tertiary,
 } from "../../../styles/colors"
-import { Link } from "gatsby"
-// import { GatsbyImage } from "gatsby-plugin-image"
+import { Link } from "gatsby-plugin-intl"
 import { IoReturnUpBackSharp } from "@react-icons/all-files/io5/IoReturnUpBackSharp"
 import { ModalImage } from "@tsaristbomba/gatsby-plugin-beast-modal"
 

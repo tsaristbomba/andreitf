@@ -8,7 +8,7 @@ import {
   secondary,
   tertiary,
 } from "../../../styles/colors"
-import { Link } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 import { IoReturnUpBackSharp } from "@react-icons/all-files/io5/IoReturnUpBackSharp"
 
 export const PostContainer = styled.div`

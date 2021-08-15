@@ -52,8 +52,6 @@ const Work: React.FC<WorkTypes> = ({
   image,
   challenges,
 }): JSX.Element => {
-  console.log(useFilterImage(image))
-
   return (
     <WorkContainer id="about">
       <WorkWrapper>

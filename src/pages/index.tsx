@@ -148,7 +148,6 @@ const IndexPage: React.FC = (): JSX.Element => {
         "Learned how to make an PWA App",
       ],
     },
-
     {
       title: "Sakha Blog Starter",
       page: "blog-sakha",
