@@ -2,6 +2,7 @@
 // import useFilterImage from "./useFilterImage"
 import filterImageString from "./filterImageString"
 import handleHexToRgba from "./handleHexToRgba"
+import getLocale from "./getLocale"
 
 describe("Utils", () => {
   // beforeAll(() => {
@@ -44,4 +45,8 @@ describe("Utils", () => {
   // it("Image query hook", () => {
   //   expect(useFilterImage("default")).not.toBe(undefined)
   // })
+
+  it("Return correct locale", () => {
+    expect(getLocale("pt")).toBe("pt-BR")
+  })
 })
