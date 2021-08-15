@@ -13,6 +13,7 @@ import {
   NavLink,
 } from "./Navbar.styles"
 import { quaternary, quinary } from "../../styles/colors"
+import LangSwitch from "../Lang Switch"
 
 // Types
 type NavbarTypes = {
@@ -53,6 +54,9 @@ const Navbar: React.FC<NavbarTypes> = ({ handleMenu, home }): JSX.Element => {
             >
               Blog
             </NavLink>
+          </NavItem>
+          <NavItem>
+            <LangSwitch />
           </NavItem>
         </NavMenu>
       </NavbarContainer>
