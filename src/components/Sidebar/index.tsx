@@ -1,4 +1,5 @@
 import React from "react"
+import LangSwitch from "../LangSwitch"
 
 // Styled Components
 import {
@@ -7,6 +8,7 @@ import {
   CloseIcon,
   SidebarMenu,
   SidebarHashLink,
+  BtnWrapper,
 } from "./Sidebar.styles"
 
 // Types
@@ -30,6 +32,11 @@ const Sidebar: React.FC<SidebarTypes> = ({
         </SidebarHashLink>
         <SidebarHashLink onClick={handleMenu} to="/blog/">
           Blog
+        </SidebarHashLink>
+        <SidebarHashLink onClick={handleMenu} to="/blog/">
+          <BtnWrapper>
+            <LangSwitch />
+          </BtnWrapper>
         </SidebarHashLink>
       </SidebarMenu>
     </SidebarContainer>

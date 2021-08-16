@@ -63,3 +63,6 @@ export const SidebarHashLink = styled(Link)`
     color: ${tertiary};
   }
 `
+export const BtnWrapper = styled.div`
+  height: 80px;
+`
