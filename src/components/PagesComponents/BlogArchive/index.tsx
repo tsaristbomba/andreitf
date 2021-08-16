@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import getLocale from "../../../utils/getLocale"
+
 import {
   ArchiveContainer,
   PostHero,
@@ -14,8 +17,6 @@ import {
   PostDate,
 } from "./Archive.styles"
 import { Dot } from "../../../styles/GlobalStyles"
-import { useIntl } from "gatsby-plugin-intl"
-import getLocale from "../../../utils/getLocale"
 
 const BlogArchive: React.FC = (): JSX.Element => {
   const [intlData, setData] = useState(null)
@@ -76,7 +77,7 @@ const BlogArchive: React.FC = (): JSX.Element => {
       <ArchiveWrapper>
         <ArchiveTitle>
           <Dot />
-          Blog Archive
+          <FormattedMessage id="archive-title" />
         </ArchiveTitle>
         <ArchiveList>
           {intlData?.map((item, key) => {
