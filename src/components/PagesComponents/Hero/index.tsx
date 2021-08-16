@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // tyled Components
 import {
@@ -25,9 +25,6 @@ type HeroTypes = {
     title: string
     page: string
     stack: string[]
-    link?: string
-    repo?: string
-    description: string
   }[]
 }
 
@@ -59,7 +56,9 @@ const Hero: React.FC<HeroTypes> = ({ socials, portfolio }): JSX.Element => {
           </Socials>
         </HeroContent>
         <HeroContent start>
-          <HeroH2>Selected Work</HeroH2>
+          <HeroH2>
+            <FormattedMessage id="hero-title" />
+          </HeroH2>
           <ul>
             {portfolio.map((item, key) => {
               return (
