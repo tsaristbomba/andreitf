@@ -1,5 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import useSocial from "../../../utils/useSocial"
+import { getImage } from "gatsby-plugin-image"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 // Styled Components
 import {
@@ -21,7 +24,6 @@ import {
   SocialLink,
 } from "./Profile.styles"
 import { Dot } from "../../../styles/GlobalStyles"
-import { getImage } from "gatsby-plugin-image"
 
 //Types
 type ProfileTypes = {
@@ -70,7 +72,7 @@ const Profile: React.FC<ProfileTypes> = ({
         <ProfileTitle>
           <Title>
             <Dot />
-            About
+            <FormattedMessage id="profile-title" />
           </Title>
         </ProfileTitle>
         <ProfileContent>
@@ -78,10 +80,17 @@ const Profile: React.FC<ProfileTypes> = ({
             <Picture loading="eager" image={image} alt={alt} />
           </ProfilePicture>
           <ProfileText>
-            {text}
+            <FormattedMessage
+              id="profile-text"
+              values={{
+                p: (...chunks) => <p>{chunks}</p>,
+              }}
+            />
             <ProfileSkills>
               <SkillsTitle>
-                <Title>My Skills:</Title>
+                <Title>
+                  <FormattedMessage id="profile-skills-title" />
+                </Title>
               </SkillsTitle>
               <Skills>
                 {skillX.map((data, key) => {
@@ -93,7 +102,9 @@ const Profile: React.FC<ProfileTypes> = ({
               </Skills>
               <Socials>
                 <SkillsTitle>
-                  <Title>Contact:</Title>
+                  <Title>
+                    <FormattedMessage id="profile-contact-title" />
+                  </Title>
                 </SkillsTitle>
                 <SocialIcons>
                   {socials.map((data, key) => {
@@ -105,7 +116,7 @@ const Profile: React.FC<ProfileTypes> = ({
                         rel="noopener noreferrer"
                         target="_blank"
                       >
-                        {data.icon}
+                        {useSocial(data)}
                       </SocialLink>
                     )
                   })}
