@@ -126,6 +126,10 @@ export const PostBody = styled.div`
     padding: 0.5rem 0 0.5rem 1rem;
   }
 
+  li::before {
+    padding-right: 0;
+  }
+
   pre {
     border-radius: 8px;
     margin-left: 1rem;
@@ -225,6 +229,10 @@ export const PostRelated = styled.div`
 
   ul {
     list-style: none;
+  }
+
+  li::before {
+    padding-right: 0;
   }
 
   ul li::before {
