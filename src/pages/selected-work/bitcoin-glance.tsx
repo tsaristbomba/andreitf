@@ -1,11 +1,12 @@
 import { navigate } from "gatsby"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 // Components
 import Layout from "../../components/layout"
 import SelectedWork from "../../components/PagesComponents/SelectedWork"
 import Seo from "../../components/seo"
 import Loading from "../../components/common/loading"
+import { useIntl } from "gatsby-plugin-intl"
 
 // Types
 type WorkPageTypes = {
@@ -25,15 +26,41 @@ type WorkPageTypes = {
 }
 
 const WorkPage: React.FC<WorkPageTypes> = ({ location }): JSX.Element => {
+  const [data, setData] = useState(null)
+
   useEffect(() => {
     location.state === null && navigate("/")
+  }, [])
+
+  const intl = useIntl()
+
+  useEffect(() => {
+    const title = intl.formatMessage({ id: "page-1-title" })
+    const page = intl.formatMessage({ id: "page-1-page" })
+    const link = intl.formatMessage({ id: "page-1-link" })
+    const repo = intl.formatMessage({ id: "page-1-repo" })
+    const description = intl.formatMessage({ id: "page-1-description" })
+    const image = intl.formatMessage({ id: "page-1-image" })
+    const challenges = "page-1-challenges"
+    const stack = ["Webpack", "Typescript", "Binance API", "CSS", "PWA"]
+
+    setData({
+      title,
+      page,
+      link,
+      repo,
+      description,
+      image,
+      challenges,
+      stack,
+    })
   }, [])
 
   return (
     <Layout>
       <Seo title={location.state === null ? "" : location.state.title} />
-      {location.state !== null ? (
-        <SelectedWork {...location.state} />
+      {data !== null ? (
+        <SelectedWork {...data} />
       ) : (
         <div
           style={{ minHeight: "calc(100vh - 120px)", background: "#2D2D2D" }}
