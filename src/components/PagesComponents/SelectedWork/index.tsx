@@ -29,6 +29,7 @@ import {
   Challenges,
 } from "./Work.styles"
 import { Dot } from "../../../styles/GlobalStyles"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 //Types
 type WorkTypes = {
@@ -38,7 +39,7 @@ type WorkTypes = {
   repo: string
   description: string
   image: string
-  challenges: string[]
+  challenges: string
   npm?: string
 }
 
@@ -119,9 +120,12 @@ const Work: React.FC<WorkTypes> = ({
                   <h2>Challenges:</h2>
                 </H2Title>
                 <ul>
-                  {challenges.map((c, key) => (
-                    <li key={key}>{c}</li>
-                  ))}
+                  <FormattedMessage
+                    id={challenges}
+                    values={{
+                      li: (...chunks) => <li>{chunks}</li>,
+                    }}
+                  />
                 </ul>
               </Challenges>
             </WorkSkills>
