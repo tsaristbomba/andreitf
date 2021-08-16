@@ -56,32 +56,11 @@ const IndexPage: React.FC = (): JSX.Element => {
       title: "Bitcoin Glance",
       page: "bitcoin-glance",
       stack: ["Webpack", "Typescript", "Binance API", "CSS", "PWA"],
-      link: "https://www.bitcoinglance.cc/",
-      repo: "https://github.com/vorsakha/bitcoin-glance",
-      description:
-        "Bitcoin Glance calculates Bitcoin market history to get a glance at the current conditions, depending on specific time frames.",
-      image: "bg",
-      challenges: [
-        "Translated a indicator strategy to code by calculating data coming from Binance API according to the indicator specifications.",
-        "Worked more closely with Webpack and respective config file",
-      ],
     },
     {
       title: "Save a Class",
       page: "save-a-class",
       stack: ["Nextjs", "MongoDB", "Tailwindcss", "Typescript"],
-      repo: "https://github.com/vorsakha/saveaclass",
-      link: "https://saveaclass.vercel.app/",
-      description:
-        "Nextjs App that grabs COD MW(2019) match history data and allow user to save a specific match class.",
-      image: "sac",
-      challenges: [
-        "NextApiRequest - I had to find out how to merge some more types to the NextApiRequest for a piece of code that required it in strict typescript.",
-        "localStorage - had to write checks to localStorage availability due to server side rendering of nextjs Window, and document are not available on the server. This is why you'll run into these types of errors if you are trying to access window properties or document. In my case, I was persisting my authentication token to localStorage on the previous application. To avoid running into these undefined errors at compile and build time, you can run a simple check.",
-        'Font change tailwind - The "extend" functionality allows you to add your font(s) alongside the existing font utilities. Add a theme.extend.fontFamily section to the Tailwind config',
-        'Type safety with extraReducers - Was getting an error regarding putting a promise inside a redux state. Resolved it by searching through the redux toolkit documentation and correctly making "action" type safe.',
-        "non-serializable value was detected in the state Was passing aixos whole result, that apart from data, it contains various other fields related to the request. Although i'm only saving data and not other fields, as the whole res object passes to the store it goes through a middleware called Serializability, which is included in redux-toolkit and enforces Redux recommendation to only store serializable data. Serializable means it can be written down as text and converted back to original object without losing information, which doesn't work with functions. A javascript function apart from code also have scope (memory associated to it), which cannot be represented as text. Serializability checks the whole payload (it is executed before your data reaches the store, so it doesn't know which parts will be used) and notices config. As config has methods among its members Serializability alerts you that it is not serializable. You could switch the middleware off, but it can detect genuine issues, so it's generally a better idea to just keep only relevant data in the payload.",
-      ],
     },
     {
       title: "Untilt - Bug Tracker",
@@ -95,17 +74,6 @@ const IndexPage: React.FC = (): JSX.Element => {
         "Axios",
         "MongoDB",
       ],
-      repo: "https://github.com/vorsakha/untilt",
-      link: "https://untilt-bug-tracker.netlify.app/",
-      description:
-        "Untilt is an app that let you log bugs and assign them to a registered member. Once a bug is resolved, a member can mark it as such. Every member have a section of their assigned bugs and other with all bugs as well.",
-      image: "untilt",
-      challenges: [
-        "Learned how to work with Redux-Toolkit",
-        "Alert system with Redux",
-        "Nodejs and Express with Typescript",
-        "Dynamic routes with Gatsbyjs",
-      ],
     },
     {
       title: "Beast Modal",
@@ -116,16 +84,6 @@ const IndexPage: React.FC = (): JSX.Element => {
         "styled-components",
         "gatsby-plugin",
         "GraphQL",
-      ],
-      repo: "https://github.com/vorsakha/beast-modal",
-      npm: "https://www.npmjs.com/package/@tsaristbomba/gatsby-plugin-beast-modal",
-      description:
-        "A Gatsby plugin for easy modal display with gatsby-plugin-image. It is used in the example image on this page.",
-      image: "default",
-      challenges: [
-        "Learned how to build a Gatsby plugin",
-        "Refactored to use the new official gatsby-image-plugin",
-        "Refactored to Typescript, deepening my knowledge on the language",
       ],
     },
     {
@@ -138,33 +96,6 @@ const IndexPage: React.FC = (): JSX.Element => {
         "GraphQL",
         "ContentfulCMS",
         "PWA",
-      ],
-      repo: "https://github.com/vorsakha/portfolio-gatsby",
-      link: "https://telfer.io",
-      description: "Portfolio and Blog.",
-      image: "TF",
-      challenges: [
-        "Got more experience working with ContentfulCMS API",
-        "Learned how to make an PWA App",
-      ],
-    },
-    {
-      title: "Sakha Blog Starter",
-      page: "blog-sakha",
-      stack: [
-        "Gatsby.js",
-        "Tailwindcss",
-        "styled-components",
-        "PWA",
-        "NetlifyCMS",
-      ],
-      repo: "https://github.com/vorsakha/gatsby-blog-sakha",
-      link: "https://sakha-blog.netlify.app/",
-      description: "Gatsbyjs blog starter template.",
-      image: "sakha-blog",
-      challenges: [
-        "Got more experience working with NetlifyCMS API",
-        "NetlifyCMS generate blog posts with markdown, a different approach from ContentfulCMS, so I had to work in a different way to generate those pages based on markdown",
       ],
     },
   ]
