@@ -27,6 +27,7 @@ export const Button = styled.button`
     right: 45vw;
     height: 40px;
     width: 40px;
+    bottom: 5vh;
   }
 `
 export const Arrow = styled(BsArrowUp)`
