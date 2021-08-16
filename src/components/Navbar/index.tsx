@@ -13,7 +13,7 @@ import {
   NavLink,
 } from "./Navbar.styles"
 import { quaternary, quinary } from "../../styles/colors"
-import LangSwitch from "../Lang Switch"
+import LangSwitch from "../LangSwitch"
 
 // Types
 type NavbarTypes = {
