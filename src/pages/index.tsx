@@ -76,15 +76,9 @@ const IndexPage: React.FC = (): JSX.Element => {
       ],
     },
     {
-      title: "Beast Modal",
-      page: "gatsby-plugin-beast-modal",
-      stack: [
-        "Gatsby.js",
-        "Typescript",
-        "styled-components",
-        "gatsby-plugin",
-        "GraphQL",
-      ],
+      title: "Remoto",
+      page: "remoto",
+      stack: ["Next.js", "Typescript", "Tailwindcss", "PWA"],
     },
     {
       title: "andreitf.co",

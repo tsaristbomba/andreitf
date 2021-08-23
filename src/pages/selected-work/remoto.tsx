@@ -37,7 +37,7 @@ const WorkPage: React.FC<WorkPageTypes> = ({ location }): JSX.Element => {
   useEffect(() => {
     const title = intl.formatMessage({ id: "page-5-title" })
     const page = intl.formatMessage({ id: "page-5-page" })
-    const npm = intl.formatMessage({ id: "page-5-npm" })
+    const link = intl.formatMessage({ id: "page-5-link" })
     const repo = intl.formatMessage({ id: "page-5-repo" })
     const description = intl.formatMessage({ id: "page-5-description" })
     const image = intl.formatMessage({ id: "page-5-image" })
@@ -53,7 +53,7 @@ const WorkPage: React.FC<WorkPageTypes> = ({ location }): JSX.Element => {
     setData({
       title,
       page,
-      npm,
+      link,
       repo,
       description,
       image,
