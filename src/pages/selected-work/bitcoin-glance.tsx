@@ -42,7 +42,13 @@ const WorkPage: React.FC<WorkPageTypes> = ({ location }): JSX.Element => {
     const description = intl.formatMessage({ id: "page-1-description" })
     const image = intl.formatMessage({ id: "page-1-image" })
     const challenges = "page-1-challenges"
-    const stack = ["Webpack", "Typescript", "Binance API", "CSS", "PWA"]
+    const stack = [
+      "React.js",
+      "Typescript",
+      "Binance API",
+      "styled-components",
+      "PWA",
+    ]
 
     setData({
       title,

@@ -55,7 +55,13 @@ const IndexPage: React.FC = (): JSX.Element => {
     {
       title: "Bitcoin Glance",
       page: "bitcoin-glance",
-      stack: ["Webpack", "Typescript", "Binance API", "CSS", "PWA"],
+      stack: [
+        "React.js",
+        "Typescript",
+        "Binance API",
+        "styled-components",
+        "PWA",
+      ],
     },
     {
       title: "Save a Class",
