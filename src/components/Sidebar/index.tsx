@@ -27,13 +27,16 @@ const Sidebar: React.FC<SidebarTypes> = ({
         <CloseIcon />
       </IconWrapper>
       <SidebarMenu>
+        <SidebarHashLink onClick={handleMenu} to="/">
+          Home
+        </SidebarHashLink>
         {/* <SidebarHashLink onClick={handleMenu} to="/about/">
           About
         </SidebarHashLink> */}
         <SidebarHashLink onClick={handleMenu} to="/blog/">
           Blog
         </SidebarHashLink>
-        <SidebarHashLink onClick={handleMenu} to="/blog/">
+        <SidebarHashLink onClick={handleMenu} to="/">
           <BtnWrapper>
             <LangSwitch />
           </BtnWrapper>

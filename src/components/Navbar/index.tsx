@@ -33,6 +33,17 @@ const Navbar: React.FC<NavbarTypes> = ({ handleMenu, home }): JSX.Element => {
           <FaBars />
         </MobileIcon>
         <NavMenu>
+          <NavItem>
+            <NavLink
+              to="/"
+              activeStyle={{
+                color: quaternary,
+                textShadow: `${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px`,
+              }}
+            >
+              Home
+            </NavLink>
+          </NavItem>
           {/* <NavItem>
             <NavLink
               to="/about/"
