@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarTypes> = ({ handleMenu, home }): JSX.Element => {
           <FaBars />
         </MobileIcon>
         <NavMenu>
-          <NavItem>
+          {/* <NavItem>
             <NavLink
               to="/about/"
               activeStyle={{
@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarTypes> = ({ handleMenu, home }): JSX.Element => {
             >
               About
             </NavLink>
-          </NavItem>
+          </NavItem> */}
           <NavItem>
             <NavLink
               to="/blog/"
