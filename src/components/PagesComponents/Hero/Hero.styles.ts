@@ -14,9 +14,12 @@ type HeroStyledTypes = {
 }
 
 export const HeroContainer = styled.div`
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
   background: ${primary};
   overflow: hidden;
+
+  display: flex;
+  align-items: center;
 `
 export const HeroWrapper = styled.div`
   display: grid;
@@ -81,12 +84,12 @@ export const HeroH1 = styled.h1`
   text-align: center;
   padding: 12px 1rem;
   border-radius: 8px;
-  font-size: 3.5rem;
+  font-size: 4rem;
   display: flex;
   text-align: start;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 55px;
+  line-height: 4rem;
   margin-bottom: -8px;
   font-weight: 300;
   text-shadow: ${quinary} 0px 4px 18px, ${quinary} 0px 2px 10px;
@@ -95,8 +98,8 @@ export const HeroH1 = styled.h1`
     text-align: center;
   }
   @media screen and (max-width: 480px) {
-    font-size: 2.8rem;
-    line-height: 40px;
+    font-size: 3.2rem;
+    line-height: 55px;
     text-align: center;
   }
   @media screen and (max-width: 340px) {
