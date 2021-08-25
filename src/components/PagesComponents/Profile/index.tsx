@@ -56,7 +56,7 @@ const Profile: React.FC<ProfileTypes> = ({
         edges {
           node {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(transformOptions: { grayscale: true })
             }
           }
         }
