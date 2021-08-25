@@ -2,7 +2,7 @@ import React from "react"
 import { FaGithub as GithubIcon } from "@react-icons/all-files/fa/FaGithub"
 import { FiLink as LinkIcon } from "@react-icons/all-files/fi/FiLink"
 import { RiNpmjsFill as NpmIcon } from "@react-icons/all-files/ri/RiNpmjsFill"
-import { primary, quaternary, secondary } from "../../../styles/colors"
+import { primary, quaternary } from "../../../styles/colors"
 
 // Utils
 import useFilterImage from "../../../utils/useFilterImage"
@@ -69,7 +69,7 @@ const Work: React.FC<WorkTypes> = ({
               alt={title}
               colors={{
                 primary: quaternary,
-                secondary: secondary,
+                secondary: quaternary,
                 background: primary,
               }}
             />
