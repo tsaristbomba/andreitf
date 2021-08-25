@@ -17,8 +17,6 @@ export const Nav = styled.nav`
   /* position: sticky; */
   top: 0;
   z-index: 999;
-  border-bottom: ${(props: NavbarStyledTypes) =>
-    props.home ? "none" : "1px solid rgba(167, 167, 167, 0.1)"};
 `
 export const NavbarContainer = styled.div`
   display: flex;
@@ -29,6 +27,8 @@ export const NavbarContainer = styled.div`
   width: 100%;
   padding-left: 24px;
   max-width: 1100px;
+  border-bottom: ${(props: NavbarStyledTypes) =>
+    props.home ? "none" : "1px solid rgba(167, 167, 167, 0.1)"};
 
   @media screen and (max-width: 768px) {
     padding-left: 24px;

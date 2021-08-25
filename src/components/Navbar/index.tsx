@@ -23,8 +23,8 @@ type NavbarTypes = {
 
 const Navbar: React.FC<NavbarTypes> = ({ handleMenu, home }): JSX.Element => {
   return (
-    <Nav home={home}>
-      <NavbarContainer>
+    <Nav>
+      <NavbarContainer home={home}>
         <NavLogo to="/">
           <span>T</span>
           <LogoSpan>F</LogoSpan>
