@@ -65,7 +65,7 @@ const WorkPage: React.FC<WorkPageTypes> = ({ location }): JSX.Element => {
 
   return (
     <Layout>
-      <Seo title={location.state === null ? "" : location.state.title} />
+      <Seo title="andreitf.co" />
       {data !== null ? (
         <SelectedWork {...data} />
       ) : (
