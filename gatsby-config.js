@@ -6,9 +6,9 @@ module.exports = {
   siteMetadata: {
     title: `Andrei T.F`,
     seoTitle: `Andrei T. Ferreira`,
-    description: `Dev / Learner / JAMStack enthusiast`,
+    description: `Andrei T. Ferreira, React Developer`,
     siteUrl: "https://andreitf.co/",
-    img: "/src/assets/images/tf-icon.jpg",
+    img: `${__dirname}/src/assets/images/tf-icon.jpg`,
   },
   flags: {
     PARALLEL_SOURCING: true,
