@@ -76,8 +76,6 @@ const Post: React.FC<BlogTemplateTypes> = (props): JSX.Element => {
 
   const intl = useIntl()
 
-  console.log(props.heroImage.gatsbyImageData.images.fallback.src)
-
   return (
     <Layout>
       <Seo
