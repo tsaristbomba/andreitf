@@ -28,6 +28,7 @@ type BlogTemplateTypes = {
           childContentfulBlogPostDescriptionTextNode: {
             childMarkdownRemark: {
               html: string
+              rawMarkdownBody: string
             }
           }
           childContentfulBlogPostBodyTextNode: {
@@ -133,19 +134,17 @@ const BlogPost = ({ data }: BlogTemplateTypes) => {
     setPost(filteredData[0].node)
   }, [])
 
+  const title = data.blog.edges[0].node.title
+  const description =
+    data.blog.edges[0].node.childContentfulBlogPostDescriptionTextNode
+      .childMarkdownRemark.rawMarkdownBody
+  const image = data.blog.edges[0].node.seoImage.fluid.src
+
   return (
     <>
+      <Seo title={title} lang={intl.locale} image={image} description={image} />
       {post !== null && (
         <>
-          <Seo
-            title={post.title}
-            lang={intl.locale}
-            image={post.seoImage.fluid.src}
-            description={
-              post.childContentfulBlogPostDescriptionTextNode
-                .childMarkdownRemark.rawMarkdownBody
-            }
-          />
           <Post {...post} />
         </>
       )}
