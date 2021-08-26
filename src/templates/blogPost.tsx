@@ -5,6 +5,7 @@ import { useIntl } from "gatsby-plugin-intl"
 // Components
 import Post from "../components/PagesComponents/Post"
 import getLocale from "../utils/getLocale"
+import Seo from "../components/seo"
 
 // Types
 type BlogTemplateTypes = {
@@ -37,28 +38,115 @@ type BlogTemplateTypes = {
           heroImage: {
             gatsbyImageData: any
           }
+          seoImage: {
+            fluid: {
+              src: string
+            }
+          }
         }
       }[]
     }
   }
 }
+interface FilterTypes {
+  node: {
+    title: string
+    slug: string
+    author: string
+    createdAt: string
+    node_locale: string
+    updatedAt: string
+    tags: string[]
+    related: {
+      slug: string
+      title: string
+      publishDate: string
+    }[]
+    childContentfulBlogPostDescriptionTextNode: {
+      childMarkdownRemark: {
+        html: string
+        rawMarkdownBody: string
+      }
+    }
+    childContentfulBlogPostBodyTextNode: {
+      childMarkdownRemark: {
+        html: string
+      }
+    }
+    heroImage: {
+      gatsbyImageData: any
+    }
+    seoImage: {
+      fluid: {
+        src: string
+      }
+    }
+  }
+}
+;[]
+interface StateTypes {
+  title: string
+  slug: string
+  author: string
+  createdAt: string
+  node_locale: string
+  updatedAt: string
+  tags: string[]
+  related: {
+    slug: string
+    title: string
+    publishDate: string
+  }[]
+  childContentfulBlogPostDescriptionTextNode: {
+    childMarkdownRemark: {
+      html: string
+      rawMarkdownBody: string
+    }
+  }
+  childContentfulBlogPostBodyTextNode: {
+    childMarkdownRemark: {
+      html: string
+    }
+  }
+  heroImage: {
+    gatsbyImageData: any
+  }
+  seoImage: {
+    fluid: {
+      src: string
+    }
+  }
+}
 
-const BlogPost: React.FC<BlogTemplateTypes> = ({ data }): JSX.Element => {
-  const [post, setPost] = useState(null)
+const BlogPost = ({ data }: BlogTemplateTypes) => {
+  const [post, setPost] = useState<StateTypes | null>(null)
 
   const intl = useIntl()
 
   useEffect(() => {
     const locale = getLocale(intl.locale)
 
-    const filteredData = data.blog.edges.filter(
+    const filteredData: any = data.blog.edges.filter(
       item => item.node.node_locale === locale
     )
 
     setPost(filteredData[0].node)
   }, [])
 
-  return <>{post !== null && <Post {...post} />}</>
+  return (
+    <>
+      <Seo
+        title={post?.title}
+        lang={intl.locale}
+        image={post?.seoImage.fluid.src}
+        description={
+          post?.childContentfulBlogPostDescriptionTextNode.childMarkdownRemark
+            .rawMarkdownBody
+        }
+      />
+      {post !== null && <Post {...post} />}
+    </>
+  )
 }
 
 export default BlogPost
@@ -93,6 +181,11 @@ export const pageQuery = graphql`
           }
           heroImage {
             gatsbyImageData(layout: CONSTRAINED)
+          }
+          seoImage: heroImage {
+            fluid {
+              src
+            }
           }
         }
       }
