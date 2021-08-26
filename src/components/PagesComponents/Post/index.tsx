@@ -19,6 +19,7 @@ import {
   PostBody,
   PostRelated,
 } from "./Post.styles"
+import seoImage from "../../../assets/images/seoTF.png"
 
 // Types
 type BlogTemplateTypes = {
@@ -76,10 +77,11 @@ const Post: React.FC<BlogTemplateTypes> = (props): JSX.Element => {
 
   const intl = useIntl()
 
-  const seoDescription =
-    props.childContentfulBlogPostDescriptionTextNode.childMarkdownRemark
-      .rawMarkdownBody
-  const seoImage = props.heroImage.gatsbyImageData.images.fallback.src
+  // const seoDescription =
+  //   props.childContentfulBlogPostDescriptionTextNode.childMarkdownRemark
+  //     .rawMarkdownBody
+  // const seoImage = props.heroImage.gatsbyImageData.images.fallback.src
+  const seoDescription = props.title
 
   return (
     <Layout>
