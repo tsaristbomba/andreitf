@@ -1,5 +1,6 @@
 import { Link, useIntl } from "gatsby-plugin-intl"
 import React from "react"
+import seoImage from "../../../assets/images/seoTF.png"
 
 // Components
 import { Dot } from "../../../styles/GlobalStyles"
@@ -19,7 +20,6 @@ import {
   PostBody,
   PostRelated,
 } from "./Post.styles"
-import seoImage from "../../../assets/images/seoTF.png"
 
 // Types
 type BlogTemplateTypes = {
@@ -89,7 +89,7 @@ const Post: React.FC<BlogTemplateTypes> = (props): JSX.Element => {
         title={props.title}
         lang={intl.locale}
         image={seoImage}
-        description={seoDescription}
+        description="{seoDescription}"
       />
       <ScrollButton />
       <PostContainer>
