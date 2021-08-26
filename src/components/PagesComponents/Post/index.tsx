@@ -1,11 +1,10 @@
-import { Link, useIntl } from "gatsby-plugin-intl"
+import { Link } from "gatsby-plugin-intl"
 import React from "react"
 
 // Components
 import { Dot } from "../../../styles/GlobalStyles"
 import Layout from "../../layout"
 import ScrollButton from "../../ScrollButton"
-import Seo from "../../seo"
 import {
   PostContainer,
   PostHero,
@@ -73,14 +72,6 @@ const Post: React.FC<BlogTemplateTypes> = (props): JSX.Element => {
 
     return date
   }
-
-  const intl = useIntl()
-
-  // const seoDescription =
-  //   props.childContentfulBlogPostDescriptionTextNode.childMarkdownRemark
-  //     .rawMarkdownBody
-  // const seoImage = props.heroImage.gatsbyImageData.images.fallback.src
-  const seoDescription = props.title
 
   return (
     <Layout>

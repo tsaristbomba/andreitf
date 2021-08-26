@@ -48,42 +48,42 @@ type BlogTemplateTypes = {
     }
   }
 }
-interface FilterTypes {
-  node: {
-    title: string
-    slug: string
-    author: string
-    createdAt: string
-    node_locale: string
-    updatedAt: string
-    tags: string[]
-    related: {
-      slug: string
-      title: string
-      publishDate: string
-    }[]
-    childContentfulBlogPostDescriptionTextNode: {
-      childMarkdownRemark: {
-        html: string
-        rawMarkdownBody: string
-      }
-    }
-    childContentfulBlogPostBodyTextNode: {
-      childMarkdownRemark: {
-        html: string
-      }
-    }
-    heroImage: {
-      gatsbyImageData: any
-    }
-    seoImage: {
-      fluid: {
-        src: string
-      }
-    }
-  }
-}
-;[]
+// interface FilterTypes {
+//   node: {
+//     title: string
+//     slug: string
+//     author: string
+//     createdAt: string
+//     node_locale: string
+//     updatedAt: string
+//     tags: string[]
+//     related: {
+//       slug: string
+//       title: string
+//       publishDate: string
+//     }[]
+//     childContentfulBlogPostDescriptionTextNode: {
+//       childMarkdownRemark: {
+//         html: string
+//         rawMarkdownBody: string
+//       }
+//     }
+//     childContentfulBlogPostBodyTextNode: {
+//       childMarkdownRemark: {
+//         html: string
+//       }
+//     }
+//     heroImage: {
+//       gatsbyImageData: any
+//     }
+//     seoImage: {
+//       fluid: {
+//         src: string
+//       }
+//     }
+//   }
+// }
+// ;[]
 interface StateTypes {
   title: string
   slug: string
@@ -135,16 +135,20 @@ const BlogPost = ({ data }: BlogTemplateTypes) => {
 
   return (
     <>
-      <Seo
-        title={post?.title}
-        lang={intl.locale}
-        image={post?.seoImage.fluid.src}
-        description={
-          post?.childContentfulBlogPostDescriptionTextNode.childMarkdownRemark
-            .rawMarkdownBody
-        }
-      />
-      {post !== null && <Post {...post} />}
+      {post !== null && (
+        <>
+          <Seo
+            title={post.title}
+            lang={intl.locale}
+            image={post.seoImage.fluid.src}
+            description={
+              post.childContentfulBlogPostDescriptionTextNode
+                .childMarkdownRemark.rawMarkdownBody
+            }
+          />
+          <Post {...post} />
+        </>
+      )}
     </>
   )
 }
