@@ -76,16 +76,18 @@ const Post: React.FC<BlogTemplateTypes> = (props): JSX.Element => {
 
   const intl = useIntl()
 
+  const seoDescription =
+    props.childContentfulBlogPostDescriptionTextNode.childMarkdownRemark
+      .rawMarkdownBody
+  const seoImage = props.heroImage.gatsbyImageData.images.fallback.src
+
   return (
     <Layout>
       <Seo
         title={props.title}
         lang={intl.locale}
-        image={props.heroImage.gatsbyImageData.images.fallback.src}
-        description={
-          props.childContentfulBlogPostDescriptionTextNode.childMarkdownRemark
-            .rawMarkdownBody
-        }
+        image={seoImage}
+        description={seoDescription}
       />
       <ScrollButton />
       <PostContainer>
