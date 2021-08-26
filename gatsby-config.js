@@ -8,6 +8,7 @@ module.exports = {
     seoTitle: `Andrei T. Ferreira`,
     description: `Dev / Learner / JAMStack enthusiast`,
     siteUrl: "https://andreitf.co/",
+    img: "/src/assets/images/tf-icon.jpg",
   },
   flags: {
     PARALLEL_SOURCING: true,

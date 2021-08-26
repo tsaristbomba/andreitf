@@ -1,4 +1,4 @@
-import { Link } from "gatsby-plugin-intl"
+import { Link, useIntl } from "gatsby-plugin-intl"
 import React from "react"
 
 // Components
@@ -44,7 +44,15 @@ type BlogTemplateTypes = {
     }
   }
   heroImage: {
-    gatsbyImageData: any
+    gatsbyImageData:
+      | {
+          images: {
+            fallback: {
+              src: string
+            }
+          }
+        }
+      | any
   }
 }
 
@@ -64,9 +72,16 @@ const Post: React.FC<BlogTemplateTypes> = (props): JSX.Element => {
 
     return date
   }
+
+  const intl = useIntl()
+
   return (
     <Layout>
-      <Seo title={props.title} />
+      <Seo
+        title={props.title}
+        lang={intl.locale}
+        image={props.heroImage.gatsbyImageData.images.fallback.src}
+      />
       <ScrollButton />
       <PostContainer>
         <PostHero
