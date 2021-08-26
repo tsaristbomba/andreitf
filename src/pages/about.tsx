@@ -9,6 +9,8 @@ import Layout from "../components/layout"
 import Profile from "../components/PagesComponents/Profile"
 import Seo from "../components/seo"
 import { useIntl } from "gatsby-plugin-intl"
+import { useEffect } from "react"
+import { navigate } from "gatsby"
 
 const AboutPage: React.FC = (): JSX.Element => {
   const profileObj = {
@@ -72,6 +74,10 @@ const AboutPage: React.FC = (): JSX.Element => {
   }
 
   const intl = useIntl()
+
+  useEffect(() => {
+    navigate("/")
+  }, [])
 
   return (
     <Layout>
