@@ -36,6 +36,7 @@ type BlogTemplateTypes = {
   childContentfulBlogPostDescriptionTextNode: {
     childMarkdownRemark: {
       html: string
+      rawMarkdownBody: string
     }
   }
   childContentfulBlogPostBodyTextNode: {
@@ -81,6 +82,10 @@ const Post: React.FC<BlogTemplateTypes> = (props): JSX.Element => {
         title={props.title}
         lang={intl.locale}
         image={props.heroImage.gatsbyImageData.images.fallback.src}
+        description={
+          props.childContentfulBlogPostDescriptionTextNode.childMarkdownRemark
+            .rawMarkdownBody
+        }
       />
       <ScrollButton />
       <PostContainer>
