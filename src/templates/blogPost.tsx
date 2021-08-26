@@ -83,6 +83,7 @@ export const pageQuery = graphql`
           childContentfulBlogPostDescriptionTextNode {
             childMarkdownRemark {
               html
+              rawMarkdownBody
             }
           }
           childContentfulBlogPostBodyTextNode {
@@ -92,6 +93,11 @@ export const pageQuery = graphql`
           }
           heroImage {
             gatsbyImageData(layout: CONSTRAINED)
+          }
+          seoImage: heroImage {
+            fluid {
+              src
+            }
           }
         }
       }
