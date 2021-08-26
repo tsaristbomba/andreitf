@@ -36,7 +36,7 @@ const IndexPage: React.FC = (): JSX.Element => {
       {
         name: "Linkedin",
         icon: <FaLinkedinIn />,
-        href: "#",
+        href: "https://www.linkedin.com/in/andreitf/",
       },
       {
         name: "Email",
