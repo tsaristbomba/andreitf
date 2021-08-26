@@ -64,7 +64,7 @@ const WorkPage: React.FC<WorkPageTypes> = ({ location }): JSX.Element => {
 
   return (
     <Layout>
-      <Seo title="REMOTO" />
+      <Seo title="REMOTO" lang={intl.locale} />
       {data !== null ? (
         <SelectedWork {...data} />
       ) : (

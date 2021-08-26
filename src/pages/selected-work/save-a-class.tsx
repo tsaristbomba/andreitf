@@ -58,7 +58,7 @@ const WorkPage: React.FC<WorkPageTypes> = ({ location }): JSX.Element => {
 
   return (
     <Layout>
-      <Seo title="Save A Class" />
+      <Seo title="Save A Class" lang={intl.locale} />
       {data !== null ? (
         <SelectedWork {...data} />
       ) : (

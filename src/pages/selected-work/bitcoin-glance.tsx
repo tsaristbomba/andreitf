@@ -64,7 +64,7 @@ const WorkPage: React.FC<WorkPageTypes> = ({ location }): JSX.Element => {
 
   return (
     <Layout>
-      <Seo title="Bitcoin Glance" />
+      <Seo title="Bitcoin Glance" lang={intl.locale} />
       {data !== null ? (
         <SelectedWork {...data} />
       ) : (

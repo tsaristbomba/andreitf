@@ -8,6 +8,7 @@ import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
 import Layout from "../components/layout"
 import Profile from "../components/PagesComponents/Profile"
 import Seo from "../components/seo"
+import { useIntl } from "gatsby-plugin-intl"
 
 const AboutPage: React.FC = (): JSX.Element => {
   const profileObj = {
@@ -70,9 +71,11 @@ const AboutPage: React.FC = (): JSX.Element => {
     ],
   }
 
+  const intl = useIntl()
+
   return (
     <Layout>
-      <Seo title="About" />
+      <Seo title="About" lang={intl.locale} />
       <Profile {...profileObj} />
     </Layout>
   )
