@@ -94,11 +94,6 @@ export const pageQuery = graphql`
           heroImage {
             gatsbyImageData(layout: CONSTRAINED)
           }
-          seoImage: heroImage {
-            fluid {
-              src
-            }
-          }
         }
       }
     }

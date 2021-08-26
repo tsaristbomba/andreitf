@@ -45,12 +45,15 @@ type BlogTemplateTypes = {
     }
   }
   heroImage: {
-    gatsbyImageData
-  }
-  seoImage: {
-    fluid: {
-      src: string
-    }
+    gatsbyImageData:
+      | {
+          images: {
+            fallback: {
+              src: string
+            }
+          }
+        }
+      | any
   }
 }
 
@@ -73,12 +76,14 @@ const Post: React.FC<BlogTemplateTypes> = (props): JSX.Element => {
 
   const intl = useIntl()
 
+  console.log(props.heroImage.gatsbyImageData.images.fallback.src)
+
   return (
     <Layout>
       <Seo
         title={props.title}
         lang={intl.locale}
-        image={props.seoImage.fluid.src}
+        image={props.heroImage.gatsbyImageData.images.fallback.src}
         description={
           props.childContentfulBlogPostDescriptionTextNode.childMarkdownRemark
             .rawMarkdownBody
