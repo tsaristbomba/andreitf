@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="andreitf" src="https://user-images.githubusercontent.com/13293669/131139123-5533f7c1-aa26-4d27-9fed-1efe4598a41a.png" width="60" />
+  <img alt="andreitf" src="https://user-images.githubusercontent.com/13293669/131139123-5533f7c1-aa26-4d27-9fed-1efe4598a41a.png" width="150" />
 </p>
 <h1 align="center">
     andreitf.co
