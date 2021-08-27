@@ -17,5 +17,5 @@
 - [PWA](https://web.dev/progressive-web-apps/) support.
 - [Mobile-First](https://medium.com/@mrmrs_/mobile-first-css-48bc4cc3f60f) approach in development.
 - Archive and tags.
-<!-- + Google Analytics. -->
 - Blazing fast!
+<!-- + Google Analytics. -->
