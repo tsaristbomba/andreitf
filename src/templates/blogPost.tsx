@@ -142,7 +142,12 @@ const BlogPost = ({ data }: BlogTemplateTypes) => {
 
   return (
     <>
-      <Seo title={title} lang={intl.locale} image={image} description={image} />
+      <Seo
+        title={title}
+        lang={intl.locale}
+        image={image}
+        description={description}
+      />
       {post !== null && (
         <>
           <Post {...post} />
