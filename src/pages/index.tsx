@@ -70,19 +70,6 @@ const IndexPage: React.FC = (): JSX.Element => {
       stack: ["Nextjs", "MongoDB", "Tailwindcss", "Typescript"],
     },
     {
-      title: "Untilt - Bug Tracker",
-      page: "untilt",
-      stack: [
-        "React.js",
-        "Typescript",
-        "Tailwindcss",
-        "Redux",
-        "Express",
-        "Axios",
-        "MongoDB",
-      ],
-    },
-    {
       title: "Remoto",
       page: "remoto",
       stack: ["Next.js", "Typescript", "Tailwindcss", "PWA"],
@@ -97,6 +84,19 @@ const IndexPage: React.FC = (): JSX.Element => {
         "GraphQL",
         "ContentfulCMS",
         "PWA",
+      ],
+    },
+    {
+      title: "Untilt - Bug Tracker",
+      page: "untilt",
+      stack: [
+        "React.js",
+        "Typescript",
+        "Tailwindcss",
+        "Redux",
+        "Express",
+        "Axios",
+        "MongoDB",
       ],
     },
   ]
