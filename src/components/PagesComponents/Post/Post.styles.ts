@@ -80,6 +80,7 @@ export const PostBack = styled(Link)`
   font-size: 13.33px;
   cursor: pointer;
   text-decoration: none;
+  width: 60px;
 `
 export const PostAuthor = styled.a`
   font-size: 13.33px;
