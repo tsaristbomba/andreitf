@@ -129,11 +129,13 @@ const Work: React.FC<WorkTypes> = ({
                 </ul>
               </Challenges>
             </WorkSkills>
-            <WorkBack to="/">
-              <Arrow />
-              Back
-              <div />
-            </WorkBack>
+            <div style={{ width: "60px" }}>
+              <WorkBack to="/">
+                <Arrow />
+                Back
+                <div />
+              </WorkBack>
+            </div>
           </WorkText>
         </WorkContent>
       </WorkWrapper>

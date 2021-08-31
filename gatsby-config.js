@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Andrei T.F`,
+    title: `TF`,
     seoTitle: `Andrei T. Ferreira`,
     description: `Andrei T. Ferreira, React Developer`,
     siteUrl: "https://andreitf.co/",
@@ -87,7 +87,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Andrei T.F`,
+        name: `TF`,
         short_name: `TF`,
         start_url: `/`,
         background_color: `#2d2d2d`,
