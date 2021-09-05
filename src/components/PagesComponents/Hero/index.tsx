@@ -38,7 +38,7 @@ const Hero: React.FC<HeroTypes> = ({ socials, portfolio }): JSX.Element => {
       <HeroWrapper>
         <HeroContent>
           <HeroH1>Andrei T. Ferreira</HeroH1>
-          <HeroP>Dev / Learner / JAMStack enthusiast</HeroP>
+          <HeroP>Dev / Learner </HeroP>
           <Socials>
             {socials.map((data, key) => {
               return (
